@@ -1,8 +1,8 @@
 {
   "name": "personal-portfolio",
   "version": "0.1.0",
-  "homepage": "http://eden-chung.github.io/portfolio",
-  "private": true,
+  "homepage": "https://eden-chung.github.io/Portfolio",
+  "private": false,
   "dependencies": {
     "@chakra-ui/icons": "^2.1.0",
     "@chakra-ui/react": "^2.8.0",
