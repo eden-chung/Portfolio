@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.073c9b0a.css",
+    "main.js": "/portfolio/static/js/main.69bc3d11.js",
+    "static/js/787.fb771931.chunk.js": "/portfolio/static/js/787.fb771931.chunk.js",
+    "static/media/myimage2.jpg": "/portfolio/static/media/myimage2.5e0ea7a1e5b42202454c.jpg",
+    "static/media/cardiologist2.png": "/portfolio/static/media/cardiologist2.d6401db66a0c0335c119.png",
+    "static/media/btt.png": "/portfolio/static/media/btt.d6008bcda5bf2232aa7b.png",
+    "static/media/resumeimage.png": "/portfolio/static/media/resumeimage.8e5cf88725517f5ff3fc.png",
+    "static/media/spotify.png": "/portfolio/static/media/spotify.813fde85b88b19992350.png",
+    "index.html": "/portfolio/index.html",
+    "main.073c9b0a.css.map": "/portfolio/static/css/main.073c9b0a.css.map",
+    "main.69bc3d11.js.map": "/portfolio/static/js/main.69bc3d11.js.map",
+    "787.fb771931.chunk.js.map": "/portfolio/static/js/787.fb771931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.69bc3d11.js"
+  ]
+}
