@@ -13,7 +13,7 @@ import { HashRouter } from "react-router-dom";
 
 function App() {
     return (
-        <HashRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter base="/">
             <Box bg={"gray.800"}>
                 <NavigationBar/>
                 <Home/>
