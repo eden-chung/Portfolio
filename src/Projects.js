@@ -1,4 +1,5 @@
 import {
+    chakra,
     Divider,
     VStack,
     Stack,
@@ -7,7 +8,6 @@ import {
     Box,
     HStack,
     Button,
-    ButtonGroup,
     Card,
     CardBody,
     Image,
@@ -16,14 +16,41 @@ import {
     Badge,
     Link,
     Center,
+    Icon,
 } from "@chakra-ui/react";
 import { useState } from "react";
 //import ProjectsArray from "./ProjectsArray";
 //import OtherProjectsArray from "./OtherProjectsArray";
 //import TagsArray from "./TagsArray";
 
-import cardiologistImage from './images/cardiologist.jpg';
-  
+import { BiLogoJava, BiLogoJavascript, BiLogoMongodb, BiLogoReact, BiLogoHtml5, BiLogoPython, BiSolidFileCss } from 'react-icons/bi';
+import { SiTensorflow } from 'react-icons/si';
+
+import cardiologistImage from './images/cardiologist2.png';
+import resumeImage from './images/resumeimage.png';
+import bttImage from './images/btt.png';
+import spotifyImage from './images/spotify.png';
+
+const imageHeight = "250px";
+
+const CardWithHoverEffect = chakra(Card, {
+    baseStyle: {
+        transition: "transform 0.3s ease-in-out",
+        "&:hover": {
+            background: "gray.200",
+            transform: "scale(1.008)",
+        },
+    },
+});
+
+const CustomLink = chakra(Link, {
+    baseStyle: {
+        _hover: {
+            textDecoration: "none", // Remove underline on hover
+        },
+    },
+});
+
 export default function Projects() {
       
       const [selected, setSelected] = useState("All");
@@ -45,109 +72,217 @@ export default function Projects() {
                 <Divider orientation="horizontal" />
                 <HStack mx={4}>
                     <Text color="white" fontWeight={800}>
-                    Projects
+                    PROJECTS
                     </Text>
                 </HStack>
                 <Divider orientation="horizontal" />
             </Stack>
-            <Stack px={4} spacing={4}>
+            <Stack px={4} spacing={5}>
                 <VStack>
-                  <Card
-                    width="100%"
-                    height="20%"
-                    direction={{
-                      base: "column",
-                    }}
-                    overflow="hidden"
-                  >
-                    <Image objectFit="cover" src={cardiologistImage}/>
-                    <Stack>
-                      <CardBody align="left">
-                        <Heading size="md">Cardiologist Assistant</Heading>
-                        <Text py={2}>Developed, trained, and finetuned an AI model in Python using Scikit-learn to create an intelligent virtual assistant for cardiologists, reducing patient wait times and increasing efficiency for doctors offices, and able to predict the likelihood of a heart attack. Built a user-friendly web application using HTML, CSS, and Flask, allowing convenient access to the virtual assistant on various devices. Implemented MongoDB integration for secure and scalable patient database, enabling storage and retrieval of data for hundreds of patients. Enabled AI model training by providing previously nonexistent data source.</Text>
-                        <HStack py={2}>
-                            <a href={"www.linkedin.com"}>
-                              <Button color="{gray.800}">
-                                GitHub Link
-                              </Button>
-                            </a>
-                        </HStack>
-                      </CardBody>
-                    </Stack>
-                  </Card>
+                    <Box mb={20}>
+                        <CustomLink href="https://github.com/eden-chung/CardiologistAssistantML" isExternal>
+                            <div
+                                style={{
+                                    transition: "transform 0.3s ease-in-out",
+                                    "&:hover": {
+                                    transform: "scale(1.1)",
+                                    },
+                                }}
+                            >
+                                <CardWithHoverEffect
+                                    width="100%"
+                                    height="20%"
+                                    direction={{
+                                    base: "column",
+                                    }}
+                                    overflow="hidden"
+                                >
+                                    <Image objectFit="cover" src={cardiologistImage} height={imageHeight}/>
+                                    <Stack>
+                                    <CardBody align="left">
+                                        <Heading size="md">Cardiologist Assistant</Heading>
+                                        <Text py={2}>Intelligent virtual assistant for cardiologists, with data collection and processing through a K Nearest Neighbors ML model. Website made with Python (Flask), HTML, and CSS. Data stored in MongoDB.</Text>
+                                        <HStack py={2}>
+                                            {/*
+                                            <a href={"www.linkedin.com"}>
+                                                <Button color="{gray.800}">
+                                                    GitHub Link
+                                                </Button>
+                                            </a>
+                                            */}
+                                            <Icon
+                                                as={BiLogoPython}
+                                                color="gray.700"
+                                                boxSize={10}
+                                            />
+                                            <Icon
+                                                as={BiLogoHtml5}
+                                                color="gray.700"
+                                                boxSize={10}
+                                            />
+                                            <Icon
+                                                as={BiSolidFileCss}
+                                                color="gray.700"
+                                                boxSize={10}
+                                            />
+                                            <Icon
+                                                as={BiLogoMongodb}
+                                                color="gray.700"
+                                                boxSize={10}
+                                            />
+                                        </HStack>
+                                    </CardBody>
+                                    </Stack>
+                                </CardWithHoverEffect>
+                            </div>
+                        </CustomLink>
+                    </Box>
+                    <Box mb={20}>
+                        <CustomLink href="https://github.com/eden-chung/ResumeBuilder" isExternal>
+                            <div
+                                style={{
+                                    transition: "transform 0.3s ease-in-out",
+                                    "&:hover": {
+                                    transform: "scale(1.1)",
+                                    },
+                                }}
+                            >
+                                <CardWithHoverEffect
+                                    width="100%"
+                                    height="20%"
+                                    direction={{
+                                    base: "column",
+                                    }}
+                                    overflow="hidden"
+                                >
+                                    <Image objectFit="cover" src={resumeImage} height={imageHeight}/>
+                                    <Stack>
+                                    <CardBody align="left">
+                                        <Heading size="md">Resume Builder</Heading>
+                                        <Text py={2}>A desktop application to automate resume making: the user inputs their information into set text fields, and the application will automatically generate a nicely formatted PDF. Application created in Java and Swing.</Text>
+                                        <HStack py={2}>
+                                            {/*
+                                            <a href={"www.linkedin.com"}>
+                                                <Button color="{gray.800}">
+                                                    GitHub Link
+                                                </Button>
+                                                </a>
+                                            */}
+                                            <Icon
+                                                as={BiLogoJava}
+                                                color="gray.700"
+                                                boxSize={10}
+                                            />
+                                        </HStack>
+                                    </CardBody>
+                                    </Stack>
+                                </CardWithHoverEffect>
+                            </div>
+                        </CustomLink>
+                    </Box>
+                    <Box mb={20}>
+                        <CustomLink href="https://github.com/eden-chung/BreakThroughTechAI" isExternal>
+                            <div
+                                style={{
+                                    transition: "transform 0.3s ease-in-out",
+                                    "&:hover": {
+                                    transform: "scale(1.1)",
+                                    },
+                                }}
+                            >
+                                <CardWithHoverEffect
+                                    width="100%"
+                                    height="20%"
+                                    direction={{
+                                    base: "column",
+                                    }}
+                                    overflow="hidden"
+                                >
+                                    <Image objectFit="cover" src={bttImage} height={imageHeight}/>
+                                    <Stack>
+                                    <CardBody align="left">
+                                        <Heading size="md">Break Through Tech, Machine Learning Models</Heading>
+                                        <Text py={2}>Throughout an intensive 8-week course, I developed various ML models, beginning with simple models such as K Nearest Neighbors, Decision Trees, Logistic Regression, then moving on to Natural Language Processing and Neural Networks. Used Python libraries such as Scikit-learn and Tensorflow. I have compiled my work from this course in this GitHub repo.</Text>
+                                        <HStack py={2}>
+                                            {/*
+                                            <a href={"www.linkedin.com"}>
+                                                <Button color="{gray.800}">
+                                                    GitHub Link
+                                                </Button>
+                                                </a>
+                                            */}
+                                            <Icon
+                                                as={BiLogoPython}
+                                                color="gray.700"
+                                                boxSize={10}
+                                            />
+                                            <Icon
+                                                as={SiTensorflow}
+                                                color="gray.700"
+                                                boxSize={9}
+                                            />
+                                        </HStack>
+                                    </CardBody>
+                                    </Stack>
+                                </CardWithHoverEffect>
+                            </div>
+                        </CustomLink>
+                    </Box>
+                    <Box mb={-12}>
+                        {/*
+                        <CustomLink href="https://github.com/eden-chung/SpotifyReact" isExternal>
+                        */}
+                        
+                            <div
+                                style={{
+                                    transition: "transform 0.3s ease-in-out",
+                                    "&:hover": {
+                                    transform: "scale(1.1)",
+                                    },
+                                }}
+                            >
+                                <Card
+                                    width="100%"
+                                    height="20%"
+                                    direction={{
+                                    base: "column",
+                                    }}
+                                    overflow="hidden"
+                                >
+                                    <Image objectFit="cover" src={spotifyImage} height={imageHeight}/>
+                                    <Stack>
+                                    <CardBody align="left">
+                                        <Heading size="md">Spotify Discover (IN PROGRESS)</Heading>
+                                        <Text py={2}>Mobile application that uses the Spotify API to retrieve information about songs and artists, and will include a guess the song game. Developed using React Native.</Text>
+                                        <HStack py={2}>
+                                            {/*
+                                            <a href={"www.linkedin.com"}>
+                                                <Button color="{gray.800}">
+                                                    GitHub Link
+                                                </Button>
+                                                </a>
+                                            */}
+                                            <Icon
+                                                as={BiLogoJavascript}
+                                                color="gray.700"
+                                                boxSize={10}
+                                            />
+                                            <Icon
+                                                as={BiLogoReact}
+                                                color="gray.700"
+                                                boxSize={10}
+                                            />
+                                        </HStack>
+                                    </CardBody>
+                                    </Stack>
+                                </Card>
+                            </div>
+                        {/*
+                        </CustomLink>
+                        */}
+                    </Box>
                 </VStack>
             </Stack>
-            {/*
-            <Text color={"gray.600"} fontSize={"xl"} px={4}>
-              Other Projects
-            </Text>
-            <Center px={4}>
-              <ButtonGroup variant="outline">
-                <Button
-                  colorScheme={selected === "All" ? `${color}` : "gray"}
-                  onClick={() => handleSelected("All")}
-                >
-                  All
-                </Button>
-                {options.map((option) => (
-                  <Button
-                    colorScheme={selected === option.value ? `${color}` : "gray"}
-                    onClick={() => handleSelected(option.value)}
-                  >
-                    {option.value}
-                  </Button>
-                ))}
-              </ButtonGroup>
-            </Center>
-            <SimpleGrid columns={[1, 2, 3]} px={4} spacing={4}>
-              {others
-                .filter((other) => {
-                  if (selected === "All") {
-                    return true;
-                  } else {
-                    return other.tags.includes(selected);
-                  }
-                })
-                .map((other) => (
-                  <Fade bottom>
-                    <Card key={other.name}>
-                      <Stack>
-                        <CardBody align="left" h={[null, "40vh"]}>
-                          <Heading size="sm">{other.name}</Heading>
-  
-                          <Text fontSize="sm" py={2}>
-                            {other.description}
-                          </Text>
-  
-                          <HStack spacing={2}>
-                            {other.buttons.map((button) => (
-                              <Link
-                                key={button.text}
-                                href={button.href}
-                                color={`${color}.400`}
-                              >
-                                {button.text}
-                              </Link>
-                            ))}
-                          </HStack>
-                          <HStack flexWrap="wrap" pt={4} spacing={2}>
-                            {other.badges.map((badge) => (
-                              <Badge
-                                my={2}
-                                key={badge.text}
-                                colorScheme={badge.colorScheme}
-                              >
-                                {badge.text}
-                              </Badge>
-                            ))}
-                          </HStack>
-                        </CardBody>
-                      </Stack>
-                    </Card>
-                  </Fade>
-                ))}
-            </SimpleGrid>
-            */}
           </Stack>
         </Container>
       </>

@@ -7,6 +7,7 @@ import './App.css';
 import NavigationBar from './NavigationBar';
 import Home from './Home';
 import Projects from './Projects';
+import Contact from './Contact';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <NavigationBar/>
       <Home/>
       <Projects/>
+      <Contact/>
     </Box>
   );
 }

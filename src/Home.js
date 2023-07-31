@@ -12,159 +12,149 @@ import {
     Icon,
     useColorModeValue,
     createIcon,
-    VStack
+    VStack, 
+    Center
 } from "@chakra-ui/react";
 
 import { IconButton } from '@chakra-ui/react';
-import { IoLogoLinkedin, IoLogoGithub, IoLogo } from 'react-icons/io';
+import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 import { MdEmail } from 'react-icons/md';
+
+import myImage from './images/myimage2.jpg';
   
-    export default function Header({ color }) {
-        const scrollToContact = () => {
-          const contactSection = document.querySelector("#contact");
-          contactSection.scrollIntoView({ behavior: "smooth" });
-        };
 
-    const linkedin = () => {
-        window.open('https://www.linkedin.com/in/eden-chung', "_blank", "noreferrer,noopener");
-    };
+const linkedin = () => {
+    window.open('https://www.linkedin.com/in/eden-chung', "_blank", "noreferrer,noopener");
+};
+const github = () => {
+    window.open('https://www.github.com/eden-chung', "_blank", "noreferrer,noopener");
+};
+const email = () => {
+    const emailAddress = "edenchung23@gmail.com";
+    const mailtoLink = `mailto:${emailAddress}`;
+    window.open(mailtoLink, "_blank");
+};
 
-    const github = () => {
-        window.open('https://www.github.com/eden-chung', "_blank", "noreferrer,noopener");
-    };
 
-    const email = () => {
-        const emailAddress = "edenchung23@gmail.com";
-        const mailtoLink = `mailto:${emailAddress}`;
-        window.open(mailtoLink, "_blank");
-    };
+export default function Header({ color }) {
+    const scrollToContact = () => {
+      const contactSection = document.querySelector("#contact");
+      contactSection.scrollIntoView({ behavior: "smooth" });
+};
 
-    return (
-        <>
-            <Heading>
-            <link
-                href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
-                rel="stylesheet"
-            />
-            </Heading>
-    
-            <Container maxW={"3xl"}>
-                <Stack
-                    as={Box}
-                    textAlign={"center"}
-                    spacing={{ base: 8, md: 14 }}
-                    pb={{ base: 20, md: 36 }}
-                    pt={{ base: 36, md: 52 }}
-                >
-                    <HStack>
-                    {/*<Image src="/assets/photo.jpg" alt="Profile image" borderRadius="full" boxSize="150px" objectFit="cover"/>*/}
-                        <Heading
-                            fontWeight={600}
-                            fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-                            lineHeight={"110%"}
-                            fontFamily="League Spartan"
-                            color="white"
-                        >
-                            <Text>Hello! My name is Eden</Text>
-                            <Text as={"span"} color={`${color}.400`} fontSize={"4xl"}>
-                                Computer Vision, AI, ML
+return (
+    <>
+        <Heading>
+        </Heading>
+
+        <Container maxW={"3xl"}>
+            <Stack
+                as={Box}
+                textAlign={"left"}
+                spacing={{ base: 8, md: 14 }}
+                pb={{ base: 20, md: 36 }}
+                pt={{ base: 36, md: 52 }}
+            >
+                <HStack align="flex-start" spacing={10}>
+                <Image src={myImage} alt="Profile image" borderRadius="full" boxSize="160px" objectFit="cover"/>
+                    <Heading
+                        fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+                        lineHeight={"110%"}
+                        color="white"
+                        style={{ margin: 0 }}
+                    >
+                        <VStack spacing={0} align="flex-start">
+                            <Text fontWeight={600}>Eden Chung</Text>
+                            <Text as={"span"} color={`${color}.400`} fontSize={"2xl"}>
+                                Student at Columbia University, Barnard College
                             </Text>
-                        </Heading>
-                    </HStack>
-                    <Text
-                        color={"gray.500"}
-                        fontSize={{ base: "lg", sm: "xl", md: "2xl" }}
-                    >
-                        Contributed to the backend development of the application, the search engine, acquiring proficiency in multiple APIs, including OpenAI, SERP, and Proxycurl, utilizing their capabilities to enhance app functionality.**Developed and implemented 15 search features, including GitHub and personal website search features, doubling the available options, improving user engagement.**Expanded skill set by learning and utilizing AWS with REST APIs, including AWS Amplify and AWS Lambda, lever- aging cloud services to optimize app scalability, performance, and overall user satisfaction
-                    </Text>
-                    <Stack
-                        direction={"column"}
-                        spacing={10}
-                        align={"center"}
-                        alignSelf={"center"}
-                        position={"relative"}
-                    >
-                        <HStack spacing={10}>
-                            <Box
-                                as="button"
+                            <Text as={"span"} color={`${color}.400`} fontSize={"2xl"} fontWeight={300} mt={-3}>
+                                B.A Computer Science, Minor in Mathematics
+                            </Text>
+                        </VStack>
+                    </Heading>
+                </HStack>
+                {/*
+                <Text
+                    color={"gray.500"}
+                    fontSize={{ base: "lg", sm: "xl", md: "2xl" }}
+                >
+                    Description TODO
+                </Text>
+                */}
+                <Stack
+                    direction={"column"}
+                    spacing={10}
+                    align={"center"}
+                    alignSelf={"center"}
+                    position={"relative"}
+                >
+                    <HStack spacing={10}>
+                        <Box
+                            as="button"
+                            onClick={linkedin}
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                            transition="transform 0.2s ease-in-out"
+                            _hover={{
+                                bg: `${color}.500`,
+                                cursor: "pointer",
+                                transform: "scale(1.1)",
+                            }}
+                        >
+                            <Icon 
+                                as={IoLogoLinkedin}
                                 onClick={linkedin}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                                transition="transform 0.2s ease-in-out" // Add transition for a smooth effect
-                                _hover={{
-                                    bg: `${color}.500`,
-                                    cursor: "pointer",
-                                    transform: "scale(1.1)", // Scale the Icon on hover
-                                }}
-                            >
-                                <Icon 
-                                    as={IoLogoLinkedin}
-                                    onClick={linkedin}
-                                    boxSize={20}
-                                    color="white"
-                                />
-                            </Box>
-                            <Box
-                                as="button"
-                                onClick={github}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                                transition="transform 0.2s ease-in-out" // Add transition for a smooth effect
-                                _hover={{
-                                    bg: `${color}.500`,
-                                    cursor: "pointer",
-                                    transform: "scale(1.1)", // Scale the Icon on hover
-                                }}
-                            >
-                                <Icon
-                                as={IoLogoGithub}
-                                onClick={github}
                                 boxSize={20}
                                 color="white"
-                                />
-                            </Box>
-                            <Box
-                                as="button"
-                                onClick={email}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                                transition="transform 0.2s ease-in-out" // Add transition for a smooth effect
-                                _hover={{
-                                    bg: `${color}.500`,
-                                    cursor: "pointer",
-                                    transform: "scale(1.1)", // Scale the Icon on hover
-                                }}
-                            >
-                                <Icon
-                                    as={MdEmail}
-                                    onClick={email}
-                                    boxSize={20}
-                                    color="white"
-                                />
-                            </Box>
-                        </HStack>
-
-                        {/*
-                        <Button
-                            bg={"#a368d4"}
-                            color="white"
-                            rounded={"full"}
-                            px={6}
+                            />
+                        </Box>
+                        <Box
+                            as="button"
+                            onClick={github}
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                            transition="transform 0.2s ease-in-out"
                             _hover={{
-                            bg: `${color}.500`,
+                                bg: `${color}.500`,
+                                cursor: "pointer",
+                                transform: "scale(1.1)",
                             }}
-                            onClick={linkedin}
                         >
-                            Let's connect!
-                        </Button>
-                        */}
-                    </Stack>
+                            <Icon
+                            as={IoLogoGithub}
+                            onClick={github}
+                            boxSize={20}
+                            color="white"
+                            />
+                        </Box>
+                        <Box
+                            as="button"
+                            onClick={email}
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                            transition="transform 0.2s ease-in-out"
+                            _hover={{
+                                bg: `${color}.500`,
+                                cursor: "pointer",
+                                transform: "scale(1.1)",
+                            }}
+                        >
+                            <Icon
+                                as={MdEmail}
+                                onClick={email}
+                                boxSize={20}
+                                color="white"
+                            />
+                        </Box>
+                    </HStack>
                 </Stack>
-            </Container>
-        </>
-    );
-}
+            </Stack>
+        </Container>
+    </>
+)};
+
   

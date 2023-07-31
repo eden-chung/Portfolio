@@ -21,8 +21,10 @@ import {
     const { isOpen, onOpen, onClose } = useDisclosure();
   
     const scrollToStart = () => {
-      const heroStart = document.querySelector("#hero");
-      heroStart.scrollIntoView({ behavior: "smooth" });
+      const startSection = document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });;
     };
     const scrollToAbout = () => {
       const aboutSection = document.querySelector("#about");
@@ -37,7 +39,7 @@ import {
       contactSection.scrollIntoView({ behavior: "smooth" });
     };
     const openResume = () => {
-      const resumePath = '/assets/resume.pdf';
+      const resumePath = '/resume.pdf';
   
       window.open(resumePath, '_blank');
     };
@@ -77,7 +79,7 @@ import {
             <Stack direction={"row"} spacing={7}>
               {true ? (
                 <>
-                  <Button variant="ghost" onClick={scrollToAbout} style={{color:"white"}}>
+                  <Button variant="ghost" onClick={scrollToStart} style={{color:"white"}}>
                     About
                   </Button>
                   <Button variant="ghost" onClick={scrollToProjects} style={{color:"white"}}>
