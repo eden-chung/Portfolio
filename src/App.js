@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import { Box, ChakraProvider } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { ThemeProvider } from '@chakra-ui/react';
 import theme from './theme';
 import React from 'react';
@@ -7,6 +6,7 @@ import './App.css';
 
 import NavigationBar from './NavigationBar';
 import Home from './Home';
+import Projects from './Projects';
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
     <Box bg={"gray.800"}>
       <NavigationBar/>
       <Home/>
+      <Projects/>
     </Box>
   );
 }
