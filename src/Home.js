@@ -35,7 +35,6 @@ const email = () => {
     window.open(mailtoLink, "_blank");
 };
 
-
 export default function Header({ color }) {
     const scrollToContact = () => {
       const contactSection = document.querySelector("#contact");
@@ -44,9 +43,6 @@ export default function Header({ color }) {
 
 return (
     <>
-        <Heading>
-        </Heading>
-
         <Container maxW={"3xl"}>
             <Stack
                 as={Box}

@@ -12,16 +12,16 @@ import { BrowserRouter } from "react-router-dom";
 
 
 function App() {
-  return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Box bg={"gray.800"}>
-        <NavigationBar/>
-        <Home/>
-        <Projects/>
-        <Contact/>
-      </Box>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <Box bg={"gray.800"}>
+                <NavigationBar/>
+                <Home/>
+                <Projects/>
+                <Contact/>
+            </Box>
+        </BrowserRouter>
+    );
 }
 
 export default App;

@@ -8,18 +8,16 @@ import {
     Heading,
     Center,
     Icon,
-  } from "@chakra-ui/react";
+} from "@chakra-ui/react";
 
-  import { IoLogoLinkedin } from 'react-icons/io';
-  import { MdEmail } from 'react-icons/md';
+import { IoLogoLinkedin } from 'react-icons/io';
+import { MdEmail } from 'react-icons/md';
 
-  
-  export default function Contact({ color }) {
+export default function Contact({ color }) {
 
     const linkedin = () => {
         window.open('https://www.linkedin.com/in/eden-chung', "_blank", "noreferrer,noopener");
-    };
-
+    };  
     const email = () => {
         const emailAddress = "edenchung23@gmail.com";
         const mailtoLink = `mailto:${emailAddress}`;
@@ -27,26 +25,26 @@ import {
     };
 
     return (
-      <>
-        <Container maxW={"3xl"} id="contact">
-            <Stack
-                as={Box}
-                textAlign={"center"}
-                spacing={{ base: 8, md: 5 }}
-                pb={{ base: 20, md: 36 }}
-            >
-                <Stack align="center" direction="row" p={4}>
-                    <Divider orientation="horizontal" />
-                        <HStack mx={4}>
-                            <Text color="white" fontWeight={800}>
-                                CONTACT
-                            </Text>
-                        </HStack>
-                    <Divider orientation="horizontal" />
-                </Stack>
+        <>
+            <Container maxW={"3xl"} id="contact">
+                <Stack
+                    as={Box}
+                    textAlign={"center"}
+                    spacing={{ base: 8, md: 5 }}
+                    pb={{ base: 20, md: 36 }}
+                >
+                    <Stack align="center" direction="row" p={4}>
+                        <Divider orientation="horizontal" />
+                            <HStack mx={4}>
+                                <Text color="white" fontWeight={800}>
+                                    CONTACT
+                                </Text>
+                            </HStack>
+                        <Divider orientation="horizontal" />
+                    </Stack>
                     <Heading fontSize={"3xl"}>Let's stay in touch!</Heading>
                     <Text color={"white"} fontSize={"xl"} px={4} mt={-5}>
-                        Excited to connect! Please message me through LinkedIn or through my email.
+                            Excited to connect! Please message me through LinkedIn or through my email.
                     </Text>
                     <Center>
                         <HStack spacing={5}>
@@ -92,10 +90,10 @@ import {
                             </Box>
                         </HStack>
                     </Center>
-            </Stack>
-        </Container>
-      </>
+                </Stack>
+            </Container>
+        </>
     );
-  }
+}
   
   
