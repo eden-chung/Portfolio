@@ -10,8 +10,7 @@ import {
     HStack,
     Image,
     Icon,
-    useColorModeValue,
-    createIcon,
+    useMediaQuery,
     VStack, 
     Center
 } from "@chakra-ui/react";
@@ -35,125 +34,120 @@ const email = () => {
     window.open(mailtoLink, "_blank");
 };
 
-const [largerThanMobile] = useMediaQuery("(min-width: 48em)");
-const isMobile = !largerThanMobile;
 
-export default function Header({ color }) {
-    const scrollToContact = () => {
-      const contactSection = document.querySelector("#contact");
-      contactSection.scrollIntoView({ behavior: "smooth" });
+export default function Home() {
+    const [largerThanMobile] = useMediaQuery("(min-width: 48em)");
+    const isMobile = !largerThanMobile;
+
+    return (
+        <>
+            <Container maxW={"3xl"}>
+                <Stack
+                    as={Box}
+                    textAlign={"left"}
+                    spacing={{ base: 8, md: 14 }}
+                    pb={{ base: 20, md: 36 }}
+                    pt={{ base: 36, md: 52 }}
+                >
+                    <HStack align="flex-start" spacing={10}>
+                    <Image src={myImage} alt="Profile image" borderRadius="full" boxSize="160px" objectFit="cover"/>
+                        <Heading
+                            fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+                            lineHeight={"110%"}
+                            color="white"
+                            style={{ margin: 0 }}
+                        >
+                            <VStack spacing={0} align="flex-start">
+                                <Text fontWeight={600} color="white">Eden Chung</Text>
+                                <Text as={"span"} color="white" fontSize={"2xl"}>
+                                    Student at Columbia University, Barnard College
+                                </Text>
+                                <Text as={"span"} color="white" fontSize={"2xl"} fontWeight={300} mt={-3}>
+                                    B.A Computer Science, Minor in Mathematics
+                                </Text>
+                            </VStack>
+                        </Heading>
+                    </HStack>
+                    {/*
+                    <Text
+                        color={"gray.500"}
+                        fontSize={{ base: "lg", sm: "xl", md: "2xl" }}
+                    >
+                        Description TODO
+                    </Text>
+                    */}
+                    <Stack
+                        direction={"column"}
+                        spacing={10}
+                        align={"center"}
+                        alignSelf={"center"}
+                        position={"relative"}
+                    >
+                        <HStack spacing={10}>
+                            <Box
+                                as="button"
+                                onClick={linkedin}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                transition="transform 0.2s ease-in-out"
+                                _hover={{
+                                    cursor: "pointer",
+                                    transform: "scale(1.1)",
+                                }}
+                            >
+                                <Icon 
+                                    as={IoLogoLinkedin}
+                                    onClick={linkedin}
+                                    boxSize={20}
+                                    color="white"
+                                />
+                            </Box>
+                            <Box
+                                as="button"
+                                onClick={github}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                transition="transform 0.2s ease-in-out"
+                                _hover={{
+                                    cursor: "pointer",
+                                    transform: "scale(1.1)",
+                                }}
+                            >
+                                <Icon
+                                as={IoLogoGithub}
+                                onClick={github}
+                                boxSize={20}
+                                color="white"
+                                />
+                            </Box>
+                            <Box
+                                as="button"
+                                onClick={email}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                transition="transform 0.2s ease-in-out"
+                                _hover={{
+                                    cursor: "pointer",
+                                    transform: "scale(1.1)",
+                                }}
+                            >
+                                <Icon
+                                    as={MdEmail}
+                                    onClick={email}
+                                    boxSize={20}
+                                    color="white"
+                                />
+                            </Box>
+                        </HStack>
+                    </Stack>
+                </Stack>
+            </Container>
+        </>
+    )
 };
 
-return (
-    <>
-        <Container maxW={"3xl"}>
-            <Stack
-                as={Box}
-                textAlign={"left"}
-                spacing={{ base: 8, md: 14 }}
-                pb={{ base: 20, md: 36 }}
-                pt={{ base: 36, md: 52 }}
-            >
-                <HStack align="flex-start" spacing={10}>
-                <Image src={myImage} alt="Profile image" borderRadius="full" boxSize="160px" objectFit="cover"/>
-                    <Heading
-                        fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-                        lineHeight={"110%"}
-                        color="white"
-                        style={{ margin: 0 }}
-                    >
-                        <VStack spacing={0} align="flex-start">
-                            <Text fontWeight={600} color="white">Eden Chung</Text>
-                            <Text as={"span"} color="white" fontSize={"2xl"}>
-                                Student at Columbia University, Barnard College
-                            </Text>
-                            <Text as={"span"} color="white" fontSize={"2xl"} fontWeight={300} mt={-3}>
-                                B.A Computer Science, Minor in Mathematics
-                            </Text>
-                        </VStack>
-                    </Heading>
-                </HStack>
-                {/*
-                <Text
-                    color={"gray.500"}
-                    fontSize={{ base: "lg", sm: "xl", md: "2xl" }}
-                >
-                    Description TODO
-                </Text>
-                */}
-                <Stack
-                    direction={"column"}
-                    spacing={10}
-                    align={"center"}
-                    alignSelf={"center"}
-                    position={"relative"}
-                >
-                    <HStack spacing={10}>
-                        <Box
-                            as="button"
-                            onClick={linkedin}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                            transition="transform 0.2s ease-in-out"
-                            _hover={{
-                                bg: `${color}.500`,
-                                cursor: "pointer",
-                                transform: "scale(1.1)",
-                            }}
-                        >
-                            <Icon 
-                                as={IoLogoLinkedin}
-                                onClick={linkedin}
-                                boxSize={20}
-                                color="white"
-                            />
-                        </Box>
-                        <Box
-                            as="button"
-                            onClick={github}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                            transition="transform 0.2s ease-in-out"
-                            _hover={{
-                                bg: `${color}.500`,
-                                cursor: "pointer",
-                                transform: "scale(1.1)",
-                            }}
-                        >
-                            <Icon
-                            as={IoLogoGithub}
-                            onClick={github}
-                            boxSize={20}
-                            color="white"
-                            />
-                        </Box>
-                        <Box
-                            as="button"
-                            onClick={email}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                            transition="transform 0.2s ease-in-out"
-                            _hover={{
-                                bg: `${color}.500`,
-                                cursor: "pointer",
-                                transform: "scale(1.1)",
-                            }}
-                        >
-                            <Icon
-                                as={MdEmail}
-                                onClick={email}
-                                boxSize={20}
-                                color="white"
-                            />
-                        </Box>
-                    </HStack>
-                </Stack>
-            </Stack>
-        </Container>
-    </>
-)};
 
   
