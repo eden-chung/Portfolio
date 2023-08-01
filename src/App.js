@@ -8,17 +8,16 @@ import Projects from './Projects';
 import Contact from './Contact';
 import { HashRouter } from "react-router-dom";
 
+import { Link } from "react-router-dom";
 
 function App() {
     return (
-        <HashRouter base="/">
-            <Box bg={"gray.800"}>
-                <NavigationBar/>
-                <Home/>
-                <Projects/>
-                <Contact/>
-            </Box>
-        </HashRouter>
+        <Box bg={"gray.800"}>
+            <NavigationBar/>
+            <Home/>
+            <Projects/>
+            <Contact/>
+        </Box>
     );
 }
 
