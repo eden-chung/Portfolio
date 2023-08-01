@@ -42,9 +42,8 @@ export default function Contact({ color }) {
                             </HStack>
                         <Divider orientation="horizontal" />
                     </Stack>
-                    <Heading fontSize={"3xl"}>Let's stay in touch!</Heading>
-                    <Text color={"white"} fontSize={"xl"} px={4} mt={-5}>
-                            Excited to connect! Please message me through LinkedIn or through my email.
+                    <Text color={"white"} fontSize={"xl"} px={4} mt={12}>
+                            Excited to connect! Please message me via LinkedIn or email.
                     </Text>
                     <Center>
                         <HStack spacing={5}>

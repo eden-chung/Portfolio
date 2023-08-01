@@ -60,11 +60,11 @@ return (
                         style={{ margin: 0 }}
                     >
                         <VStack spacing={0} align="flex-start">
-                            <Text fontWeight={600}>Eden Chung</Text>
-                            <Text as={"span"} color={`${color}.400`} fontSize={"2xl"}>
+                            <Text fontWeight={600} color="white">Eden Chung</Text>
+                            <Text as={"span"} color="white" fontSize={"2xl"}>
                                 Student at Columbia University, Barnard College
                             </Text>
-                            <Text as={"span"} color={`${color}.400`} fontSize={"2xl"} fontWeight={300} mt={-3}>
+                            <Text as={"span"} color="white" fontSize={"2xl"} fontWeight={300} mt={-3}>
                                 B.A Computer Science, Minor in Mathematics
                             </Text>
                         </VStack>

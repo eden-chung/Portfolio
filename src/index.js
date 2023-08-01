@@ -4,18 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import theme from './theme';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import theme from './theme'; // Import your custom theme
 
-import { ChakraProvider } from '@chakra-ui/react'
+const customTheme = extendTheme(theme);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={customTheme}>
         <React.StrictMode>
             <App/>
         </React.StrictMode>
     </ChakraProvider>
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

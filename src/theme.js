@@ -5,6 +5,18 @@ const theme = extendTheme({
         primary: '#3182CE',
         secondary: '#805AD5',
     },
+    components: {
+        Heading: {
+            baseStyle: {
+                color: "#1a202c",
+            },
+        },
+        Text: {
+            baseStyle: {
+                color: "#1a202c",
+            },
+        },
+    },
 });
 
 export default theme;

@@ -29,9 +29,11 @@ import bttImage from './images/btt.png';
 import spotifyImage from './images/spotify.png';
 
 const imageHeight = "250px";
+const cardTextColor = "#1a202c";
 
 const CardWithHoverEffect = chakra(Card, {
     baseStyle: {
+        bg: "white",
         transition: "transform 0.3s ease-in-out",
         "&:hover": {
             background: "gray.200",
@@ -97,7 +99,7 @@ export default function Projects() {
                                         <Image objectFit="cover" src={cardiologistImage} height={imageHeight}/>
                                         <Stack>
                                         <CardBody align="left">
-                                            <Heading size="md">Cardiologist Assistant</Heading>
+                                            <Heading size="md" style={{color: cardTextColor}}>Cardiologist Assistant</Heading>
                                             <Text py={2}>Intelligent virtual assistant for cardiologists, with data collection and processing through a K Nearest Neighbors ML model. Website made with Python (Flask), HTML, and CSS. Data stored in MongoDB.</Text>
                                             <HStack py={2}>
                                                 {/*
@@ -244,6 +246,7 @@ export default function Projects() {
                                         base: "column",
                                         }}
                                         overflow="hidden"
+                                        bg="white"
                                     >
                                         <Image objectFit="cover" src={spotifyImage} height={imageHeight}/>
                                         <Stack>

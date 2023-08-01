@@ -1,6 +1,4 @@
 import { Box } from "@chakra-ui/react";
-import { ThemeProvider } from '@chakra-ui/react';
-import theme from './theme';
 import React from 'react';
 import './App.css';
 
