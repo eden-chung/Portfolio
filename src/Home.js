@@ -35,6 +35,9 @@ const email = () => {
     window.open(mailtoLink, "_blank");
 };
 
+const [largerThanMobile] = useMediaQuery("(min-width: 48em)");
+const isMobile = !largerThanMobile;
+
 export default function Header({ color }) {
     const scrollToContact = () => {
       const contactSection = document.querySelector("#contact");
