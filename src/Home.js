@@ -36,13 +36,12 @@ const email = () => {
 
 
 export default function Home() {
-    const [largerThanMobile] = useMediaQuery("(min-width: 48em)");
+    const [largerThanMobile] = useMediaQuery("(min-width: 768px)");
     const isMobile = !largerThanMobile;
 
     return (
         <>
             <Container maxW={"3xl"}>
-                {console.log("test")}
                 <Stack
                     as={Box}
                     textAlign={"left"}
