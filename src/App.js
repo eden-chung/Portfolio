@@ -6,6 +6,7 @@ import NavigationBar from './NavigationBar';
 import Home from './Home';
 import Projects from './Projects';
 import Contact from './Contact';
+import Footer from './Footer';
 import { HashRouter } from "react-router-dom";
 
 import { Link } from "react-router-dom";
@@ -17,6 +18,7 @@ function App() {
             <Home/>
             <Projects/>
             <Contact/>
+            <Footer/>
         </Box>
     );
 }

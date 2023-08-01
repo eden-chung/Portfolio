@@ -36,7 +36,7 @@ const email = () => {
 
 
 export default function Home() {
-    const [largerThanMobile] = useMediaQuery("(min-width: 48em)");
+    const [largerThanMobile] = useMediaQuery("(min-width: 768px)");
     const isMobile = !largerThanMobile;
 
     return (
@@ -57,6 +57,17 @@ export default function Home() {
                             color="white"
                             style={{ margin: 0 }}
                         >
+                        {isMobile ? (
+                            <VStack spacing={3} align="flex-start">
+                                <Text fontWeight={700} color="white">Eden Chung</Text>
+                                <Text as={"span"} color="white" fontSize={"2xl"} fontWeight={600} mt={1}>
+                                    Student at Columbia University, Barnard College
+                                </Text>
+                                <Text as={"span"} color="white" fontSize={"2xl"} fontWeight={300} mt={1}>
+                                    B.A Computer Science, Minor in Mathematics
+                                </Text>
+                            </VStack>
+                        ) : (
                             <VStack spacing={0} align="flex-start">
                                 <Text fontWeight={600} color="white">Eden Chung</Text>
                                 <Text as={"span"} color="white" fontSize={"2xl"}>
@@ -66,6 +77,7 @@ export default function Home() {
                                     B.A Computer Science, Minor in Mathematics
                                 </Text>
                             </VStack>
+                        )}
                         </Heading>
                     </HStack>
                     {/*

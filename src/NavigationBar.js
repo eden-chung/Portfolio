@@ -2,9 +2,14 @@ import {
     Flex,
     Button,
     Stack,
+    useMediaQuery,
     useDisclosure,
-    HStack,
     Link,
+    Drawer,
+    DrawerBody,
+    DrawerContent,
+    DrawerOverlay,
+    IconButton
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { useState } from "react";
@@ -12,6 +17,9 @@ import { useState } from "react";
 export default function Nav() {
     const buttonTextColor = "white";
     const buttonHoverColor = "gray.700";
+
+    const [largerThanMobile] = useMediaQuery("(min-width: 768px)");
+    const isMobile = !largerThanMobile;
     
     const [scroll, setScroll] = useState(false);
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -41,7 +49,6 @@ export default function Nav() {
         : setScroll(false);
   
     window.addEventListener("scroll", changeScroll);
-    
   
     return (
         <>
@@ -62,20 +69,50 @@ export default function Nav() {
                     
                 <Flex alignItems={"center"}>
                     <Stack direction={"row"} spacing={7}>
+                        {isMobile ? (
                         <>
-                            <Button variant="ghost" onClick={scrollToStart} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
-                                About
-                            </Button>
-                            <Button variant="ghost" onClick={scrollToProjects} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
-                                Projects
-                            </Button>
-                            <Button variant="ghost" onClick={openResume} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
-                                Resume
-                            </Button>
-                            <Button variant="ghost" onClick={scrollToContact} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
-                                Contact
-                            </Button>
-                        </>
+                            <Button
+                              as={IconButton}
+                              icon={<HamburgerIcon />}
+                              onClick={onOpen}
+                              bg = "gray.700"
+                            />
+                            <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
+                              <DrawerOverlay />
+                              <DrawerContent bg="gray.900">
+                                <DrawerBody>
+                                  <Button variant="ghost" onClick={scrollToStart} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                    About
+                                  </Button>
+                                  <Button variant="ghost" onClick={scrollToProjects} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                  Projects
+                                  </Button>
+                                  <Button variant="ghost" onClick={openResume} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                  Resume
+                                  </Button>
+                                  <Button variant="ghost" onClick={scrollToContact} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                    Contact
+                                  </Button>
+                                </DrawerBody>
+                              </DrawerContent>
+                            </Drawer>
+                      </>
+                        ) : (
+                            <>
+                                <Button variant="ghost" onClick={scrollToStart} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                    About
+                                </Button>
+                                <Button variant="ghost" onClick={scrollToProjects} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                    Projects
+                                </Button>
+                                <Button variant="ghost" onClick={openResume} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                    Resume
+                                </Button>
+                                <Button variant="ghost" onClick={scrollToContact} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                    Contact
+                                </Button>
+                            </>
+                        )}        
                     </Stack>
                 </Flex>
             </Flex>
