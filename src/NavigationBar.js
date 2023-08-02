@@ -25,28 +25,36 @@ export default function Nav() {
     const { isOpen, onOpen, onClose } = useDisclosure();
   
     const scrollToStart = () => {
-      const startSection = document.documentElement.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });;
+        const startSection = document.documentElement.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });;
     };
+
     const scrollToProjects = () => {
-      const projectsSection = document.querySelector("#projects");
-      projectsSection.scrollIntoView({ behavior: "smooth" });
+        const projectsSection = document.querySelector("#projects");
+        projectsSection.scrollIntoView({ behavior: "smooth"});
     };
+
+    const scrollToSkills = () => {
+        const skillsSection = document.querySelector("#skills");
+        skillsSection.scrollIntoView({ behavior: "smooth" });
+    };
+
     const scrollToContact = () => {
-      const contactSection = document.querySelector("#contact");
-      contactSection.scrollIntoView({ behavior: "smooth" });
+        const contactSection = document.querySelector("#contact");
+        contactSection.scrollIntoView({ behavior: "smooth" });
     };
+
     const openResume = () => {
-      const resumePath = '/resume.pdf';
-  
-      window.open(resumePath, '_blank');
+        const resumePath = '/resume.pdf';
+        window.open(resumePath, '_blank');
     };
+
     const changeScroll = () =>
-      document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
-        ? setScroll(true)
-        : setScroll(false);
+        document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
+            ? setScroll(true)
+            : setScroll(false);
   
     window.addEventListener("scroll", changeScroll);
   
@@ -72,38 +80,44 @@ export default function Nav() {
                         {isMobile ? (
                         <>
                             <Button
-                              as={IconButton}
-                              icon={<HamburgerIcon />}
-                              onClick={onOpen}
-                              bg = "gray.700"
+                                as={IconButton}
+                                icon={<HamburgerIcon />}
+                                onClick={onOpen}
+                                bg = "gray.700"
                             />
                             <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
-                              <DrawerOverlay />
-                              <DrawerContent bg="gray.900">
+                                <DrawerOverlay />
+                                <DrawerContent bg="gray.900">
                                 <DrawerBody>
-                                  <Button variant="ghost" onClick={scrollToStart} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
-                                    About
-                                  </Button>
-                                  <Button variant="ghost" onClick={scrollToProjects} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
-                                  Projects
-                                  </Button>
-                                  <Button variant="ghost" onClick={openResume} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
-                                  Resume
-                                  </Button>
-                                  <Button variant="ghost" onClick={scrollToContact} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
-                                    Contact
-                                  </Button>
+                                    <Button variant="ghost" onClick={scrollToStart} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                        Home
+                                    </Button>
+                                    <Button variant="ghost" onClick={scrollToProjects} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                        Projects
+                                    </Button>
+                                    <Button variant="ghost" onClick={scrollToSkills} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                        Skills
+                                    </Button>
+                                    <Button variant="ghost" onClick={openResume} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                        Resume
+                                    </Button>
+                                    <Button variant="ghost" onClick={scrollToContact} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                        Contact
+                                    </Button>
                                 </DrawerBody>
                               </DrawerContent>
                             </Drawer>
-                      </>
+                        </>
                         ) : (
                             <>
                                 <Button variant="ghost" onClick={scrollToStart} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
-                                    About
+                                    Home
                                 </Button>
                                 <Button variant="ghost" onClick={scrollToProjects} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
                                     Projects
+                                </Button>
+                                <Button variant="ghost" onClick={scrollToSkills} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                    Skills
                                 </Button>
                                 <Button variant="ghost" onClick={openResume} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
                                     Resume

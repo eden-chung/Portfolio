@@ -7,18 +7,13 @@ import {
     Container,
     Box,
     HStack,
-    Button,
     Card,
     CardBody,
     Image,
     Heading,
-    SimpleGrid,
-    Badge,
     Link,
-    Center,
     Icon,
 } from "@chakra-ui/react";
-import { useState } from "react";
 
 import { BiLogoJava, BiLogoJavascript, BiLogoMongodb, BiLogoReact, BiLogoHtml5, BiLogoPython, BiSolidFileCss } from 'react-icons/bi';
 import { SiTensorflow } from 'react-icons/si';
@@ -42,21 +37,16 @@ const CardWithHoverEffect = chakra(Card, {
     },
 });
 
+// Remove underline on hover
 const CustomLink = chakra(Link, {
     baseStyle: {
         _hover: {
-            textDecoration: "none", // Remove underline on hover
+            textDecoration: "none",
         },
     },
 });
 
 export default function Projects() {
-      
-    const [selected, setSelected] = useState("All");
-
-    const handleSelected = (value) => {
-      setSelected(value);
-    };
       
     return (
         <>
@@ -218,7 +208,7 @@ export default function Projects() {
                                                     <Icon
                                                         as={SiTensorflow}
                                                         color="gray.700"
-                                                        boxSize={9}
+                                                        boxSize={8}
                                                     />
                                                 </HStack>
                                             </CardBody>

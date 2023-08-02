@@ -5,14 +5,12 @@ import {
     Heading,
     Container,
     Text,
-    Button,
     Stack,
     HStack,
     Image,
     Icon,
     useMediaQuery,
     VStack, 
-    Center
 } from "@chakra-ui/react";
 
 import { IconButton } from '@chakra-ui/react';

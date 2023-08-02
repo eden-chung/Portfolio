@@ -5,7 +5,6 @@ import {
     Container,
     Box,
     HStack,
-    Heading,
     Center,
     Icon,
 } from "@chakra-ui/react";
@@ -13,7 +12,7 @@ import {
 import { IoLogoLinkedin } from 'react-icons/io';
 import { MdEmail } from 'react-icons/md';
 
-export default function Contact({ color }) {
+export default function Contact() {
 
     const linkedin = () => {
         window.open('https://www.linkedin.com/in/eden-chung', "_blank", "noreferrer,noopener");
@@ -55,7 +54,6 @@ export default function Contact({ color }) {
                                 justifyContent="center"
                                 transition="transform 0.2s ease-in-out"
                                 _hover={{
-                                    bg: `${color}.500`,
                                     cursor: "pointer",
                                     transform: "scale(1.1)",
                                 }}
@@ -75,7 +73,6 @@ export default function Contact({ color }) {
                                 justifyContent="center"
                                 transition="transform 0.2s ease-in-out"
                                 _hover={{
-                                    bg: `${color}.500`,
                                     cursor: "pointer",
                                     transform: "scale(1.1)",
                                 }}
