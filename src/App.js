@@ -8,9 +8,6 @@ import Projects from './Projects';
 import Skills from './Skills';
 import Contact from './Contact';
 import Footer from './Footer';
-import { HashRouter } from "react-router-dom";
-
-import { Link } from "react-router-dom";
 
 function App() {
     return (

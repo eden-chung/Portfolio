@@ -3,10 +3,9 @@ import {
     Container,
     Stack,
     Text,
-    useColorModeValue,
-  } from "@chakra-ui/react";
+} from "@chakra-ui/react";
   
-  export default function Footer() {
+export default function Footer() {
     return (
         <Box
             bg="gray.900"
@@ -25,5 +24,5 @@ import {
             </Container>
         </Box>
     );
-  }
+}
   

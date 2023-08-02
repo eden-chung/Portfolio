@@ -5,7 +5,6 @@ import {
     Container,
     Box,
     HStack,
-    Heading,
     Center,
     Icon,
 } from "@chakra-ui/react";
