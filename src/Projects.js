@@ -220,14 +220,13 @@ export default function Projects() {
                                             },
                                         }}
                                     >
-                                        <Card
+                                        <CardWithHoverEffect
                                             width="100%"
                                             height="20%"
                                             direction={{
                                             base: "column",
                                             }}
                                             overflow="hidden"
-                                            bg="white"
                                         >
                                             <Image objectFit="cover" src={spotifyImage} height={imageHeight}/>
                                             <Stack>
@@ -255,7 +254,7 @@ export default function Projects() {
                                                     </HStack>
                                                 </CardBody>
                                             </Stack>
-                                        </Card>
+                                        </CardWithHoverEffect>
                                     </div>
                                 </CustomLink>
                             </Box>
