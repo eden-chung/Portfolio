@@ -232,7 +232,7 @@ export default function Projects() {
                                             <Stack>
                                                 <CardBody align="left">
                                                     <Heading size="md">Spotify Discover Mobile App</Heading>
-                                                    <Text py={2}>Mobile application that uses the Spotify API to retrieve information about songs and artists, and will include a guess the song game. Developed using React Native.</Text>
+                                                    <Text py={2}>Mobile application that uses the Spotify API to retrieve information about songs and artists, analyze users' playlists, and includes a guess the song game. Developed using React Native.</Text>
                                                     <HStack py={2}>
                                                         {/*
                                                         <a href={"www.linkedin.com"}>
