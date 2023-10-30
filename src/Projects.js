@@ -21,6 +21,7 @@ import { SiTensorflow } from 'react-icons/si';
 import cardiologistImage from './images/cardiologist2.png';
 import resumeImage from './images/resumeimage.png';
 import bttImage from './images/btt.png';
+import anoteImage from './images/anote.png';
 import spotifyImage from './images/spotify.png';
 
 const imageHeight = "250px";
@@ -68,6 +69,47 @@ export default function Projects() {
                     </Stack>
                     <Stack px={4} spacing={5}>
                         <VStack>
+                        <Box mb={20}>
+                                <CustomLink href="https://github.com/eden-chung/BreakThroughTechAI" isExternal>
+                                    <div
+                                        style={{
+                                            transition: "transform 0.3s ease-in-out",
+                                            "&:hover": {
+                                            transform: "scale(1.1)",
+                                            },
+                                        }}
+                                    >
+                                        <CardWithHoverEffect
+                                            width="100%"
+                                            height="20%"
+                                            direction={{
+                                            base: "column",
+                                            }}
+                                            overflow="hidden"
+                                        >
+                                            <Image objectFit="cover" src={anoteImage} height={imageHeight}/>
+                                            <Stack>
+                                                <CardBody align="left">
+                                                    <Heading size="md">Anote AI, Break Through Tech Project</Heading>
+                                                    <Text py={2}>In collaboration with the NYC-based, AI startup, this project consists of a fine-tuned generative AI, LLM model built specifically to answer questions on financial documents.</Text>
+                                                    <HStack py={2}>
+                                                        <Icon
+                                                            as={BiLogoPython}
+                                                            color="gray.700"
+                                                            boxSize={10}
+                                                        />
+                                                        <Icon
+                                                            as={SiTensorflow}
+                                                            color="gray.700"
+                                                            boxSize={8}
+                                                        />
+                                                    </HStack>
+                                                </CardBody>
+                                            </Stack>
+                                        </CardWithHoverEffect>
+                                    </div>
+                                </CustomLink>
+                            </Box>
                             <Box mb={20}>
                                 <CustomLink href="https://github.com/eden-chung/BreakThroughTechAI" isExternal>
                                     <div
