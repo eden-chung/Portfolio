@@ -70,7 +70,7 @@ export default function Projects() {
                     <Stack px={4} spacing={5}>
                         <VStack>
                         <Box mb={20}>
-                                <CustomLink href="https://github.com/eden-chung/BreakThroughTechAI" isExternal>
+                                <CustomLink href="https://github.com/eden-chung/AnoteML" isExternal>
                                     <div
                                         style={{
                                             transition: "transform 0.3s ease-in-out",
@@ -91,17 +91,12 @@ export default function Projects() {
                                             <Stack>
                                                 <CardBody align="left">
                                                     <Heading size="md">Anote AI, Break Through Tech Project</Heading>
-                                                    <Text py={2}>In collaboration with the NYC-based, AI startup, this project consists of a fine-tuned generative AI, LLM model built specifically to answer questions on financial documents.</Text>
+                                                    <Text py={2}>A collaboration with the NYC-based, AI startup named Anote, this project consists of a fine-tuned generative AI, LLM model built specifically to answer questions on financial documents. Natural language processing techniques were used, along with prompt engineering, fine-tuning, and retrieval augmented generation (RAG) to create a industry-specific LLM.</Text>
                                                     <HStack py={2}>
                                                         <Icon
                                                             as={BiLogoPython}
                                                             color="gray.700"
                                                             boxSize={10}
-                                                        />
-                                                        <Icon
-                                                            as={SiTensorflow}
-                                                            color="gray.700"
-                                                            boxSize={8}
                                                         />
                                                     </HStack>
                                                 </CardBody>
