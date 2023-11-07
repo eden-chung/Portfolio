@@ -23,6 +23,7 @@ import resumeImage from './images/resumeimage.png';
 import bttImage from './images/btt.png';
 import anoteImage from './images/anote.png';
 import spotifyImage from './images/spotify.png';
+import columbiaImage from './images/columbia.jpg';
 
 const imageHeight = "250px";
 const cardTextColor = "#1a202c";
@@ -69,7 +70,7 @@ export default function Projects() {
                     </Stack>
                     <Stack px={4} spacing={5}>
                         <VStack>
-                        <Box mb={20}>
+                            <Box mb={20}>
                                 <CustomLink href="https://github.com/eden-chung/AnoteML" isExternal>
                                     <div
                                         style={{
@@ -197,6 +198,88 @@ export default function Projects() {
                                 </CustomLink>
                             </Box>
                             <Box mb={20}>
+                                <CustomLink href="https://github.com/eden-chung/divhacks2023" isExternal>
+                                    <div
+                                        style={{
+                                            transition: "transform 0.3s ease-in-out",
+                                            "&:hover": {
+                                            transform: "scale(1.1)",
+                                            },
+                                        }}
+                                    >
+                                        <CardWithHoverEffect
+                                            width="100%"
+                                            height="20%"
+                                            direction={{
+                                            base: "column",
+                                            }}
+                                            overflow="hidden"
+                                        >
+                                            <Image objectFit="cover" src={columbiaImage} height={imageHeight}/>
+                                            <Stack>
+                                                <CardBody align="left">
+                                                    <Heading size="md">Columbia Book Exchange - Hackathon Project</Heading>
+                                                    <Text py={2}>Web app made for Columbia students to buy/sell or lend textbooks and core class books. Winner of DivHacks 2023!</Text>
+                                                    <HStack py={2}>
+                                                        <Icon
+                                                            as={BiLogoJavascript}
+                                                            color="gray.700"
+                                                            boxSize={10}
+                                                        />
+                                                        <Icon
+                                                            as={BiLogoReact}
+                                                            color="gray.700"
+                                                            boxSize={10}
+                                                        />
+                                                    </HStack>
+                                                </CardBody>
+                                            </Stack>
+                                        </CardWithHoverEffect>
+                                    </div>
+                                </CustomLink>
+                            </Box>
+                            <Box mb={20}>
+                                <CustomLink href="https://github.com/eden-chung/SpotifyReact" isExternal>
+                                    <div
+                                        style={{
+                                            transition: "transform 0.3s ease-in-out",
+                                            "&:hover": {
+                                            transform: "scale(1.1)",
+                                            },
+                                        }}
+                                    >
+                                        <CardWithHoverEffect
+                                            width="100%"
+                                            height="20%"
+                                            direction={{
+                                            base: "column",
+                                            }}
+                                            overflow="hidden"
+                                        >
+                                            <Image objectFit="cover" src={spotifyImage} height={imageHeight}/>
+                                            <Stack>
+                                                <CardBody align="left">
+                                                    <Heading size="md">Spotify Discover Mobile App</Heading>
+                                                    <Text py={2}>Mobile application that uses the Spotify API to retrieve information about songs and artists, analyze users' playlists, and includes a guess the song game. Developed using React Native.</Text>
+                                                    <HStack py={2}>
+                                                        <Icon
+                                                            as={BiLogoJavascript}
+                                                            color="gray.700"
+                                                            boxSize={10}
+                                                        />
+                                                        <Icon
+                                                            as={BiLogoReact}
+                                                            color="gray.700"
+                                                            boxSize={10}
+                                                        />
+                                                    </HStack>
+                                                </CardBody>
+                                            </Stack>
+                                        </CardWithHoverEffect>
+                                    </div>
+                                </CustomLink>
+                            </Box>
+                            <Box mb={-12}>
                                 <CustomLink href="https://github.com/eden-chung/CardiologistAssistantML" isExternal>
                                     <div
                                         style={{
@@ -242,54 +325,6 @@ export default function Projects() {
                                                     />
                                                 </HStack>
                                             </CardBody>
-                                            </Stack>
-                                        </CardWithHoverEffect>
-                                    </div>
-                                </CustomLink>
-                            </Box>
-                            <Box mb={-12}>
-                                <CustomLink href="https://github.com/eden-chung/SpotifyReact" isExternal>
-                                    <div
-                                        style={{
-                                            transition: "transform 0.3s ease-in-out",
-                                            "&:hover": {
-                                            transform: "scale(1.1)",
-                                            },
-                                        }}
-                                    >
-                                        <CardWithHoverEffect
-                                            width="100%"
-                                            height="20%"
-                                            direction={{
-                                            base: "column",
-                                            }}
-                                            overflow="hidden"
-                                        >
-                                            <Image objectFit="cover" src={spotifyImage} height={imageHeight}/>
-                                            <Stack>
-                                                <CardBody align="left">
-                                                    <Heading size="md">Spotify Discover Mobile App</Heading>
-                                                    <Text py={2}>Mobile application that uses the Spotify API to retrieve information about songs and artists, analyze users' playlists, and includes a guess the song game. Developed using React Native.</Text>
-                                                    <HStack py={2}>
-                                                        {/*
-                                                        <a href={"www.linkedin.com"}>
-                                                            <Button color="{gray.800}">
-                                                                GitHub Link
-                                                            </Button>
-                                                            </a>
-                                                        */}
-                                                        <Icon
-                                                            as={BiLogoJavascript}
-                                                            color="gray.700"
-                                                            boxSize={10}
-                                                        />
-                                                        <Icon
-                                                            as={BiLogoReact}
-                                                            color="gray.700"
-                                                            boxSize={10}
-                                                        />
-                                                    </HStack>
-                                                </CardBody>
                                             </Stack>
                                         </CardWithHoverEffect>
                                     </div>
