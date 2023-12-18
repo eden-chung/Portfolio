@@ -9,6 +9,7 @@ import {
     Tooltip,
     Center,
     Icon,
+    Image,
     Popover, 
     PopoverTrigger,
     PopoverContent,
@@ -23,6 +24,8 @@ import { MdEmail } from 'react-icons/md';
 import { BiLogoJava, BiLogoJavascript, BiLogoMongodb, BiLogoReact, BiLogoHtml5, BiLogoPython, BiSolidFileCss } from 'react-icons/bi';
 import { AiOutlineConsoleSql } from 'react-icons/ai'
 import { SiTensorflow, SiScikitlearn } from 'react-icons/si';
+
+import C_logo from './images/c_icon.svg';
 
 export default function Skills() {
     const [TensorFlowHovered, setTensorFlowHovered] = useState(false);
@@ -183,6 +186,21 @@ export default function Skills() {
                                         />
                                     </Box>
                                 </Tooltip>
+                                <Tooltip label="C">
+                                    <Box
+                                        as="button"
+                                        display="flex"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        transition="transform 0.2s ease-in-out"
+                                        _hover={{
+                                            cursor: "pointer",
+                                            transform: isMobile ? "none" : "scale(1.1)"
+                                        }}
+                                    >
+                                        <Image src={C_logo} height={8} style={{ filter: 'brightness(0) invert(1)' }}/>
+                                    </Box>
+                                </Tooltip>
                                 <Tooltip label="SQL">
                                     <Box
                                         as="button"
@@ -333,6 +351,21 @@ export default function Skills() {
                                             boxSize={10}
                                             color="white"
                                         />
+                                    </Box>
+                                </Tooltip>
+                                <Tooltip label="C">
+                                    <Box
+                                        as="button"
+                                        display="flex"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        transition="transform 0.2s ease-in-out"
+                                        _hover={{
+                                            cursor: "pointer",
+                                            transform: isMobile ? "none" : "scale(1.1)"
+                                        }}
+                                    >
+                                        <Image src={C_logo} height={8} style={{ filter: 'brightness(0) invert(1)' }}/>
                                     </Box>
                                 </Tooltip>
                                 <Tooltip label="SQL">
