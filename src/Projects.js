@@ -24,6 +24,9 @@ import bttImage from './images/btt.png';
 import anoteImage from './images/anote.png';
 import spotifyImage from './images/spotify.png';
 import columbiaImage from './images/columbia.jpg';
+import webserversImage from './images/webservers_copy.jpg';
+import C_logo_grey from './images/c_icon_grey.svg';
+
 
 const imageHeight = "250px";
 const cardTextColor = "#1a202c";
@@ -70,6 +73,38 @@ export default function Projects() {
                     </Stack>
                     <Stack px={4} spacing={5}>
                         <VStack>
+                        <Box mb={20}>
+                                <CustomLink href="https://gist.github.com/eden-chung/bbb2af0e035835e4fd1c22aa196adda8" isExternal>
+                                    <div
+                                        style={{
+                                            transition: "transform 0.3s ease-in-out",
+                                            "&:hover": {
+                                            transform: "scale(1.1)",
+                                            },
+                                        }}
+                                    >
+                                        <CardWithHoverEffect
+                                            width="100%"
+                                            height="20%"
+                                            direction={{
+                                            base: "column",
+                                            }}
+                                            overflow="hidden"
+                                        >
+                                            <Image objectFit="cover" src={webserversImage} height={imageHeight}/>
+                                            <Stack>
+                                                <CardBody align="left">
+                                                    <Heading size="md">HTTP Client and Server</Heading>
+                                                    <Text py={2}>Leveraging the sockets API in C, I created an HTTP server and HTTP client from scratch.</Text>
+                                                    <HStack py={2}>
+                                                        <Image src={C_logo_grey} height={8}/>
+                                                    </HStack>
+                                                </CardBody>
+                                            </Stack>
+                                        </CardWithHoverEffect>
+                                    </div>
+                                </CustomLink>
+                            </Box>
                             <Box mb={20}>
                                 <CustomLink href="https://github.com/eden-chung/AnoteML" isExternal>
                                     <div
