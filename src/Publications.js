@@ -74,7 +74,7 @@ export default function Publications() {
                     <Stack px={4} spacing={5}>
                         <VStack>
                             <Box mb={20}>
-                                <CustomLink href="https://gist.github.com/eden-chung/bbb2af0e035835e4fd1c22aa196adda8" isExternal>
+                                <CustomLink href="https://arxiv.org/abs/2401.09555v1" isExternal>
                                     <div
                                         style={{
                                             transition: "transform 0.3s ease-in-out",
@@ -94,8 +94,40 @@ export default function Publications() {
                                             <Image objectFit="cover" src={webserversImage} height={imageHeight} />
                                             <Stack>
                                                 <CardBody align="left">
-                                                    <Heading size="md">HTTP Client and Server</Heading>
-                                                    <Text py={2}>Leveraging the sockets API in C, I created an HTTP server and HTTP client from scratch.</Text>
+                                                    <Heading size="md">Improving Classification Performance With Human Feedback: Label a few, we label the rest</Heading>
+                                                    {/* <Text py={2}>Leveraging the sockets API in C, I created an HTTP server and HTTP client from scratch.</Text> */}
+                                                    <HStack py={2}>
+                                                        <Image src={C_logo_grey} height={8} />
+                                                    </HStack>
+                                                </CardBody>
+                                            </Stack>
+                                        </CardWithHoverEffect>
+                                    </div>
+                                </CustomLink>
+                            </Box>
+                            <Box mb={20}>
+                                <CustomLink href="https://arxiv.org/abs/2404.07221v1" isExternal>
+                                    <div
+                                        style={{
+                                            transition: "transform 0.3s ease-in-out",
+                                            "&:hover": {
+                                                transform: "scale(1.1)",
+                                            },
+                                        }}
+                                    >
+                                        <CardWithHoverEffect
+                                            width="100%"
+                                            height="20%"
+                                            direction={{
+                                                base: "column",
+                                            }}
+                                            overflow="hidden"
+                                        >
+                                            <Image objectFit="cover" src={webserversImage} height={imageHeight} />
+                                            <Stack>
+                                                <CardBody align="left">
+                                                    <Heading size="md">Improving Retrieval for RAG based Question Answering Models on Financial Documents</Heading>
+                                                    {/* <Text py={2}>Leveraging the sockets API in C, I created an HTTP server and HTTP client from scratch.</Text> */}
                                                     <HStack py={2}>
                                                         <Image src={C_logo_grey} height={8} />
                                                     </HStack>

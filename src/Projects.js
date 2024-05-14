@@ -111,7 +111,28 @@ export default function Projects() {
                                                             />
                                                         </div>
                                                         <button
-                                                            style={{ float: 'right' }}
+                                                            style={{
+                                                                float: 'right',
+                                                                border: '1px solid black',
+                                                                padding: '8px 16px',
+                                                                cursor: 'pointer',
+                                                                backgroundColor: 'white',
+                                                                transition: 'background-color 200ms, color 200ms', 
+                                                                borderRadius: '8px',
+                                                            }}
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                window.open("https://github.com/eden-chung/RNEA_GPU_Parallelization/blob/main/RNEA_GPU_Paralellization_paper.pdf", "_blank", "noopener,noreferrer");
+                                                            }}
+                                                            onMouseEnter={(e) => {
+                                                                e.currentTarget.style.backgroundColor = 'gray';
+                                                                e.currentTarget.style.color = 'white';
+                                                            }}
+                                                            onMouseLeave={(e) => {
+                                                                e.currentTarget.style.backgroundColor = 'white';
+                                                                e.currentTarget.style.color = 'black';
+                                                            }}
+        
                                                         >
                                                             See paper
                                                         </button>
