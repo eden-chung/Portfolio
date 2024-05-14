@@ -74,74 +74,56 @@ export default function Projects() {
                     </Stack>
                     <Stack px={4} spacing={5}>
                         <VStack>
-                            <Box mb={20}>
+                            <Box mb={20} position="relative">
                                 <CustomLink href="https://github.com/eden-chung/RNEA_GPU_Parallelization" isExternal>
-                                    <div
-                                        style={{
-                                            transition: "transform 0.3s ease-in-out",
-                                            "&:hover": {
-                                                transform: "scale(1.1)",
-                                            },
-                                        }}
-                                    >
+                                    <div style={{ transition: "transform 0.3s ease-in-out" }}>
                                         <CardWithHoverEffect
                                             width="100%"
                                             height="20%"
-                                            direction={{
-                                                base: "column",
-                                            }}
+                                            direction={{ base: "column" }}
                                             overflow="hidden"
                                         >
                                             <Image objectFit="cover" src={gpu} height={imageHeight} />
                                             <Stack>
                                                 <CardBody align="left">
                                                     <Heading size="md">RNEA GPU Parallelization</Heading>
-                                                    <Text py={2}>Optimized GPU-based parallelization of robotics inverse dynamics algorithms for enhanced performance. </Text>
+                                                    <Text py={2}>Optimized GPU-based parallelization of robotics inverse dynamics algorithms for enhanced performance.</Text>
                                                     <HStack py={2} justifyContent="space-between">
                                                         <div style={{ display: 'flex', alignItems: 'center' }}>
-                                                            <Icon
-                                                                as={BiLogoPython}
-                                                                color="gray.700"
-                                                                boxSize={10}
-                                                            />
-                                                            <Icon
-                                                                as={SiJulia}
-                                                                color="gray.700"
-                                                                boxSize={8}
-                                                            />
+                                                            <Icon as={BiLogoPython} color="gray.700" boxSize={10} />
+                                                            <Icon as={SiJulia} color="gray.700" boxSize={8} />
                                                         </div>
-                                                        <button
-                                                            style={{
-                                                                float: 'right',
-                                                                border: '1px solid black',
-                                                                padding: '8px 16px',
-                                                                cursor: 'pointer',
-                                                                backgroundColor: 'white',
-                                                                transition: 'background-color 200ms, color 200ms', 
-                                                                borderRadius: '8px',
-                                                            }}
-                                                            onClick={(e) => {
-                                                                e.stopPropagation();
-                                                                window.open("https://github.com/eden-chung/RNEA_GPU_Parallelization/blob/main/RNEA_GPU_Paralellization_paper.pdf", "_blank", "noopener,noreferrer");
-                                                            }}
-                                                            onMouseEnter={(e) => {
-                                                                e.currentTarget.style.backgroundColor = 'gray';
-                                                                e.currentTarget.style.color = 'white';
-                                                            }}
-                                                            onMouseLeave={(e) => {
-                                                                e.currentTarget.style.backgroundColor = 'white';
-                                                                e.currentTarget.style.color = 'black';
-                                                            }}
-        
-                                                        >
-                                                            See paper
-                                                        </button>
                                                     </HStack>
                                                 </CardBody>
                                             </Stack>
                                         </CardWithHoverEffect>
                                     </div>
                                 </CustomLink>
+                                <button
+                                    style={{
+                                        position: 'absolute', // Position the button absolutely within the relative Box
+                                        right: '20px', // Position to the right
+                                        bottom: '20px', // Position at the bottom
+                                        zIndex: 10, // Ensure it is above other elements
+                                        border: '1px solid black',
+                                        padding: '8px 16px',
+                                        cursor: 'pointer',
+                                        backgroundColor: 'white',
+                                        transition: 'background-color 200ms, color 200ms',
+                                        borderRadius: '8px',
+                                    }}
+                                    onClick={() => window.open("https://github.com/eden-chung/RNEA_GPU_Parallelization/blob/main/RNEA_GPU_Paralellization_paper.pdf", "_blank", "noopener,noreferrer")}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.backgroundColor = 'gray';
+                                        e.currentTarget.style.color = 'white';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.backgroundColor = 'white';
+                                        e.currentTarget.style.color = 'black';
+                                    }}
+                                >
+                                    See paper
+                                </button>
                             </Box>
                             <Box mb={20}>
                                 <CustomLink href="https://gist.github.com/eden-chung/bbb2af0e035835e4fd1c22aa196adda8" isExternal>

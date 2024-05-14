@@ -48,7 +48,7 @@ export default function Publications() {
 
     return (
         <>
-            <Container maxW={"3xl"} id="projects">
+            <Container maxW={"3xl"} id="publications">
                 <Stack
                     as={Box}
                     textAlign={"center"}
@@ -95,7 +95,7 @@ export default function Publications() {
                                     </div>
                                 </CustomLink>
                             </Box>
-                            <Box mb={20}>
+                            <Box mb={-2}>
                                 <CustomLink href="https://arxiv.org/abs/2404.07221v1" isExternal>
                                     <div
                                         style={{
