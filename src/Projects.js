@@ -18,15 +18,15 @@ import {
 import { BiLogoJava, BiLogoJavascript, BiLogoMongodb, BiLogoReact, BiLogoHtml5, BiLogoPython, BiSolidFileCss } from 'react-icons/bi';
 import { SiJulia, SiTensorflow } from 'react-icons/si';
 
-import cardiologistImage from './images/cardiologist2.png';
-import resumeImage from './images/resumeimage.png';
-import bttImage from './images/btt.png';
-import anoteImage from './images/anote.png';
-import spotifyImage from './images/spotify.png';
-import columbiaImage from './images/columbia.jpg';
-import webserversImage from './images/webservers_copy.jpg';
+import cardiologistImage from './images/project_covers/cardiologist2.png';
+import resumeImage from './images/project_covers/resumeimage.png';
+import bttImage from './images/project_covers/btt.png';
+import anoteImage from './images/project_covers/anote.png';
+import spotifyImage from './images/project_covers/spotify.png';
+import columbiaImage from './images/project_covers/columbia.jpg';
+import webserversImage from './images/project_covers/webservers.jpg';
 import C_logo_grey from './images/c_icon_grey.svg';
-import gpu from './images/gpu.jpg'
+import gpu from './images/project_covers/gpu.jpg'
 
 
 const imageHeight = "250px";

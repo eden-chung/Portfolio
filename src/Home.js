@@ -17,7 +17,7 @@ import { IconButton } from '@chakra-ui/react';
 import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 import { MdEmail } from 'react-icons/md';
 
-import myImage from './images/myimage2.jpg';
+import myImage from './images/my_profile2.jpg';
   
 
 const linkedin = () => {

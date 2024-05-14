@@ -18,15 +18,8 @@ import {
 import { BiLogoJava, BiLogoJavascript, BiLogoMongodb, BiLogoReact, BiLogoHtml5, BiLogoPython, BiSolidFileCss } from 'react-icons/bi';
 import { SiTensorflow } from 'react-icons/si';
 
-import cardiologistImage from './images/cardiologist2.png';
-import resumeImage from './images/resumeimage.png';
-import bttImage from './images/btt.png';
-import anoteImage from './images/anote.png';
-import spotifyImage from './images/spotify.png';
-import columbiaImage from './images/columbia.jpg';
-import webserversImage from './images/webservers_copy.jpg';
-import C_logo_grey from './images/c_icon_grey.svg';
-
+import RagPaperImage from './images/publications/rag_paper.png';
+import ClassificationPaperImage from './images/publications/classification_paper.png';
 
 const imageHeight = "250px";
 const cardTextColor = "#1a202c";
@@ -91,14 +84,11 @@ export default function Publications() {
                                             }}
                                             overflow="hidden"
                                         >
-                                            <Image objectFit="cover" src={webserversImage} height={imageHeight} />
+                                            <Image objectFit="cover" src={RagPaperImage} height={imageHeight} />
                                             <Stack>
                                                 <CardBody align="left">
-                                                    <Heading size="md">Improving Classification Performance With Human Feedback: Label a few, we label the rest</Heading>
-                                                    {/* <Text py={2}>Leveraging the sockets API in C, I created an HTTP server and HTTP client from scratch.</Text> */}
-                                                    <HStack py={2}>
-                                                        <Image src={C_logo_grey} height={8} />
-                                                    </HStack>
+                                                    <Heading size="md">Improving Retrieval for RAG based Question Answering Models on Financial Documents</Heading>
+                                                    <Text py={2}>The effectiveness of Large Language Models (LLMs) in generating accurate responses relies heavily on the quality of input provided, particularly when employing Retrieval Augmented Generation (RAG) techniques. RAG enhances LLMs by sourcing the most relevant text chunk(s) to base queries upon. Despite the significant advancements in LLMs' response quality in recent years, users may still encounter inaccuracies or irrelevant answers; these issues often stem from suboptimal text chunk retrieval by RAG rather than the inherent capabilities of LLMs. To augment the efficacy of LLMs, it is crucial to refine the RAG process. This paper explores the existing constraints of RAG pipelines and introduces methodologies for enhancing text retrieval. It delves into strategies such as sophisticated chunking techniques, query expansion, the incorporation of metadata annotations, the application of re-ranking algorithms, and the fine-tuning of embedding algorithms. Implementing these approaches can substantially improve the retrieval quality, thereby elevating the overall performance and reliability of LLMs in processing and responding to queries. </Text>
                                                 </CardBody>
                                             </Stack>
                                         </CardWithHoverEffect>
@@ -123,14 +113,11 @@ export default function Publications() {
                                             }}
                                             overflow="hidden"
                                         >
-                                            <Image objectFit="cover" src={webserversImage} height={imageHeight} />
+                                            <Image objectFit="cover" src={ClassificationPaperImage} height={imageHeight} />
                                             <Stack>
                                                 <CardBody align="left">
-                                                    <Heading size="md">Improving Retrieval for RAG based Question Answering Models on Financial Documents</Heading>
-                                                    {/* <Text py={2}>Leveraging the sockets API in C, I created an HTTP server and HTTP client from scratch.</Text> */}
-                                                    <HStack py={2}>
-                                                        <Image src={C_logo_grey} height={8} />
-                                                    </HStack>
+                                                    <Heading size="md">Improving Classification Performance With Human Feedback: Label a few, we label the rest</Heading>
+                                                    <Text py={2}>In the realm of artificial intelligence, where a vast majority of data is unstructured, obtaining substantial amounts of labeled data to train supervised machine learning models poses a significant challenge. To address this, we delve into few-shot and active learning, where are goal is to improve AI models with human feedback on a few labeled examples. This paper focuses on understanding how a continuous feedback loop can refine models, thereby enhancing their accuracy, recall, and precision through incremental human input. By employing Large Language Models (LLMs) such as GPT-3.5, BERT, and SetFit, we aim to analyze the efficacy of using a limited number of labeled examples to substantially improve model accuracy. We benchmark this approach on the Financial Phrasebank, Banking, Craigslist, Trec, Amazon Reviews datasets to prove that with just a few labeled examples, we are able to surpass the accuracy of zero shot large language models to provide enhanced text classification performance. We demonstrate that rather than needing to manually label millions of rows of data, we just need to label a few and the model can effectively predict the rest. </Text>
                                                 </CardBody>
                                             </Stack>
                                         </CardWithHoverEffect>
