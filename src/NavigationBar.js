@@ -36,6 +36,11 @@ export default function Nav() {
         projectsSection.scrollIntoView({ behavior: "smooth"});
     };
 
+    const scrollToPublications = () => {
+        const publicationsSection = document.querySelector("#publications");
+        publicationsSection.scrollIntoView({ behavior: "smooth"});
+    };
+
     const scrollToSkills = () => {
         const skillsSection = document.querySelector("#skills");
         skillsSection.scrollIntoView({ behavior: "smooth" });
@@ -95,6 +100,9 @@ export default function Nav() {
                                     <Button variant="ghost" onClick={scrollToProjects} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
                                         Projects
                                     </Button>
+                                    <Button variant="ghost" onClick={scrollToPublications} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                        Publications
+                                    </Button>
                                     <Button variant="ghost" onClick={scrollToSkills} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
                                         Skills
                                     </Button>
@@ -115,6 +123,9 @@ export default function Nav() {
                                 </Button>
                                 <Button variant="ghost" onClick={scrollToProjects} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
                                     Projects
+                                </Button>
+                                <Button variant="ghost" onClick={scrollToPublications} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
+                                    Publications
                                 </Button>
                                 <Button variant="ghost" onClick={scrollToSkills} style={{color:buttonTextColor}} _hover={{backgroundColor:buttonHoverColor}}>
                                     Skills

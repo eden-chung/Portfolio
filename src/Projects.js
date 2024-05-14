@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 
 import { BiLogoJava, BiLogoJavascript, BiLogoMongodb, BiLogoReact, BiLogoHtml5, BiLogoPython, BiSolidFileCss } from 'react-icons/bi';
-import { SiTensorflow } from 'react-icons/si';
+import { SiJulia, SiTensorflow } from 'react-icons/si';
 
 import cardiologistImage from './images/cardiologist2.png';
 import resumeImage from './images/resumeimage.png';
@@ -26,6 +26,7 @@ import spotifyImage from './images/spotify.png';
 import columbiaImage from './images/columbia.jpg';
 import webserversImage from './images/webservers_copy.jpg';
 import C_logo_grey from './images/c_icon_grey.svg';
+import gpu from './images/gpu.jpg'
 
 
 const imageHeight = "250px";
@@ -52,7 +53,7 @@ const CustomLink = chakra(Link, {
 });
 
 export default function Projects() {
-      
+
     return (
         <>
             <Container maxW={"3xl"} id="projects">
@@ -64,22 +65,22 @@ export default function Projects() {
                 >
                     <Stack align="center" direction="row" p={4}>
                         <Divider orientation="horizontal" />
-                            <HStack mx={4}>
-                                <Text color="white" fontWeight={800}>
-                                    PROJECTS
-                                </Text>
-                            </HStack>
+                        <HStack mx={4}>
+                            <Text color="white" fontWeight={800}>
+                                PROJECTS
+                            </Text>
+                        </HStack>
                         <Divider orientation="horizontal" />
                     </Stack>
                     <Stack px={4} spacing={5}>
                         <VStack>
-                        <Box mb={20}>
-                                <CustomLink href="https://gist.github.com/eden-chung/bbb2af0e035835e4fd1c22aa196adda8" isExternal>
+                            <Box mb={20}>
+                                <CustomLink href="https://github.com/eden-chung/RNEA_GPU_Parallelization" isExternal>
                                     <div
                                         style={{
                                             transition: "transform 0.3s ease-in-out",
                                             "&:hover": {
-                                            transform: "scale(1.1)",
+                                                transform: "scale(1.1)",
                                             },
                                         }}
                                     >
@@ -87,17 +88,65 @@ export default function Projects() {
                                             width="100%"
                                             height="20%"
                                             direction={{
-                                            base: "column",
+                                                base: "column",
                                             }}
                                             overflow="hidden"
                                         >
-                                            <Image objectFit="cover" src={webserversImage} height={imageHeight}/>
+                                            <Image objectFit="cover" src={gpu} height={imageHeight} />
+                                            <Stack>
+                                                <CardBody align="left">
+                                                    <Heading size="md">RNEA GPU Parallelization</Heading>
+                                                    <Text py={2}>Optimized GPU-based parallelization of robotics inverse dynamics algorithms for enhanced performance. </Text>
+                                                    <HStack py={2} justifyContent="space-between">
+                                                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                                                            <Icon
+                                                                as={BiLogoPython}
+                                                                color="gray.700"
+                                                                boxSize={10}
+                                                            />
+                                                            <Icon
+                                                                as={SiJulia}
+                                                                color="gray.700"
+                                                                boxSize={8}
+                                                            />
+                                                        </div>
+                                                        <button
+                                                            style={{ float: 'right' }}
+                                                        >
+                                                            See paper
+                                                        </button>
+                                                    </HStack>
+                                                </CardBody>
+                                            </Stack>
+                                        </CardWithHoverEffect>
+                                    </div>
+                                </CustomLink>
+                            </Box>
+                            <Box mb={20}>
+                                <CustomLink href="https://gist.github.com/eden-chung/bbb2af0e035835e4fd1c22aa196adda8" isExternal>
+                                    <div
+                                        style={{
+                                            transition: "transform 0.3s ease-in-out",
+                                            "&:hover": {
+                                                transform: "scale(1.1)",
+                                            },
+                                        }}
+                                    >
+                                        <CardWithHoverEffect
+                                            width="100%"
+                                            height="20%"
+                                            direction={{
+                                                base: "column",
+                                            }}
+                                            overflow="hidden"
+                                        >
+                                            <Image objectFit="cover" src={webserversImage} height={imageHeight} />
                                             <Stack>
                                                 <CardBody align="left">
                                                     <Heading size="md">HTTP Client and Server</Heading>
                                                     <Text py={2}>Leveraging the sockets API in C, I created an HTTP server and HTTP client from scratch.</Text>
                                                     <HStack py={2}>
-                                                        <Image src={C_logo_grey} height={8}/>
+                                                        <Image src={C_logo_grey} height={8} />
                                                     </HStack>
                                                 </CardBody>
                                             </Stack>
@@ -111,7 +160,7 @@ export default function Projects() {
                                         style={{
                                             transition: "transform 0.3s ease-in-out",
                                             "&:hover": {
-                                            transform: "scale(1.1)",
+                                                transform: "scale(1.1)",
                                             },
                                         }}
                                     >
@@ -119,11 +168,11 @@ export default function Projects() {
                                             width="100%"
                                             height="20%"
                                             direction={{
-                                            base: "column",
+                                                base: "column",
                                             }}
                                             overflow="hidden"
                                         >
-                                            <Image objectFit="cover" src={anoteImage} height={imageHeight}/>
+                                            <Image objectFit="cover" src={anoteImage} height={imageHeight} />
                                             <Stack>
                                                 <CardBody align="left">
                                                     <Heading size="md">Anote AI, Break Through Tech Project</Heading>
@@ -147,7 +196,7 @@ export default function Projects() {
                                         style={{
                                             transition: "transform 0.3s ease-in-out",
                                             "&:hover": {
-                                            transform: "scale(1.1)",
+                                                transform: "scale(1.1)",
                                             },
                                         }}
                                     >
@@ -155,11 +204,11 @@ export default function Projects() {
                                             width="100%"
                                             height="20%"
                                             direction={{
-                                            base: "column",
+                                                base: "column",
                                             }}
                                             overflow="hidden"
                                         >
-                                            <Image objectFit="cover" src={bttImage} height={imageHeight}/>
+                                            <Image objectFit="cover" src={bttImage} height={imageHeight} />
                                             <Stack>
                                                 <CardBody align="left">
                                                     <Heading size="md">Break Through Tech, Machine Learning Models</Heading>
@@ -191,45 +240,45 @@ export default function Projects() {
                             </Box>
                             <Box mb={20}>
                                 <CustomLink href="https://github.com/eden-chung/ResumeBuilder" isExternal>
-                                <div
-                                    style={{
-                                        transition: "transform 0.3s ease-in-out",
-                                        "&:hover": {
-                                        transform: "scale(1.1)",
-                                        },
-                                    }}
-                                >
-                                    <CardWithHoverEffect
-                                        width="100%"
-                                        height="20%"
-                                        direction={{
-                                        base: "column",
+                                    <div
+                                        style={{
+                                            transition: "transform 0.3s ease-in-out",
+                                            "&:hover": {
+                                                transform: "scale(1.1)",
+                                            },
                                         }}
-                                        overflow="hidden"
                                     >
-                                        <Image objectFit="cover" src={resumeImage} height={imageHeight}/>
-                                        <Stack>
-                                            <CardBody align="left">
-                                                <Heading size="md">Resume Builder</Heading>
-                                                <Text py={2}>A desktop application to automate resume making: the user inputs their information into set text fields, and the application will automatically generate a nicely formatted PDF. Application created in Java and Swing.</Text>
-                                                <HStack py={2}>
-                                                    {/*
+                                        <CardWithHoverEffect
+                                            width="100%"
+                                            height="20%"
+                                            direction={{
+                                                base: "column",
+                                            }}
+                                            overflow="hidden"
+                                        >
+                                            <Image objectFit="cover" src={resumeImage} height={imageHeight} />
+                                            <Stack>
+                                                <CardBody align="left">
+                                                    <Heading size="md">Resume Builder</Heading>
+                                                    <Text py={2}>A desktop application to automate resume making: the user inputs their information into set text fields, and the application will automatically generate a nicely formatted PDF. Application created in Java and Swing.</Text>
+                                                    <HStack py={2}>
+                                                        {/*
                                                     <a href={"www.linkedin.com"}>
                                                         <Button color="{gray.800}">
                                                             GitHub Link
                                                         </Button>
                                                         </a>
                                                     */}
-                                                    <Icon
-                                                        as={BiLogoJava}
-                                                        color="gray.700"
-                                                        boxSize={10}
-                                                    />
-                                                </HStack>
-                                            </CardBody>
-                                        </Stack>
-                                    </CardWithHoverEffect>
-                                </div>
+                                                        <Icon
+                                                            as={BiLogoJava}
+                                                            color="gray.700"
+                                                            boxSize={10}
+                                                        />
+                                                    </HStack>
+                                                </CardBody>
+                                            </Stack>
+                                        </CardWithHoverEffect>
+                                    </div>
                                 </CustomLink>
                             </Box>
                             <Box mb={20}>
@@ -238,7 +287,7 @@ export default function Projects() {
                                         style={{
                                             transition: "transform 0.3s ease-in-out",
                                             "&:hover": {
-                                            transform: "scale(1.1)",
+                                                transform: "scale(1.1)",
                                             },
                                         }}
                                     >
@@ -246,11 +295,11 @@ export default function Projects() {
                                             width="100%"
                                             height="20%"
                                             direction={{
-                                            base: "column",
+                                                base: "column",
                                             }}
                                             overflow="hidden"
                                         >
-                                            <Image objectFit="cover" src={columbiaImage} height={imageHeight}/>
+                                            <Image objectFit="cover" src={columbiaImage} height={imageHeight} />
                                             <Stack>
                                                 <CardBody align="left">
                                                     <Heading size="md">Columbia Book Exchange - Hackathon Project</Heading>
@@ -279,7 +328,7 @@ export default function Projects() {
                                         style={{
                                             transition: "transform 0.3s ease-in-out",
                                             "&:hover": {
-                                            transform: "scale(1.1)",
+                                                transform: "scale(1.1)",
                                             },
                                         }}
                                     >
@@ -287,11 +336,11 @@ export default function Projects() {
                                             width="100%"
                                             height="20%"
                                             direction={{
-                                            base: "column",
+                                                base: "column",
                                             }}
                                             overflow="hidden"
                                         >
-                                            <Image objectFit="cover" src={spotifyImage} height={imageHeight}/>
+                                            <Image objectFit="cover" src={spotifyImage} height={imageHeight} />
                                             <Stack>
                                                 <CardBody align="left">
                                                     <Heading size="md">Spotify Discover Mobile App</Heading>
@@ -320,7 +369,7 @@ export default function Projects() {
                                         style={{
                                             transition: "transform 0.3s ease-in-out",
                                             "&:hover": {
-                                            transform: "scale(1.1)",
+                                                transform: "scale(1.1)",
                                             },
                                         }}
                                     >
@@ -328,38 +377,38 @@ export default function Projects() {
                                             width="100%"
                                             height="20%"
                                             direction={{
-                                            base: "column",
+                                                base: "column",
                                             }}
                                             overflow="hidden"
                                         >
-                                            <Image objectFit="cover" src={cardiologistImage} height={imageHeight}/>
+                                            <Image objectFit="cover" src={cardiologistImage} height={imageHeight} />
                                             <Stack>
-                                            <CardBody align="left">
-                                                <Heading size="md" style={{color: cardTextColor}}>Virtual Cardiology Assistant</Heading>
-                                                <Text py={2}>Intelligent virtual assistant for cardiologists, with data collection and processing through a K Nearest Neighbors ML model. Website made with Python (Flask), HTML, and CSS. Data stored in a NoSQL database, MongoDB.</Text>
-                                                <HStack py={2}>
-                                                    <Icon
-                                                        as={BiLogoPython}
-                                                        color="gray.700"
-                                                        boxSize={10}
-                                                    />
-                                                    <Icon
-                                                        as={BiLogoHtml5}
-                                                        color="gray.700"
-                                                        boxSize={10}
-                                                    />
-                                                    <Icon
-                                                        as={BiSolidFileCss}
-                                                        color="gray.700"
-                                                        boxSize={10}
-                                                    />
-                                                    <Icon
-                                                        as={BiLogoMongodb}
-                                                        color="gray.700"
-                                                        boxSize={10}
-                                                    />
-                                                </HStack>
-                                            </CardBody>
+                                                <CardBody align="left">
+                                                    <Heading size="md" style={{ color: cardTextColor }}>Virtual Cardiology Assistant</Heading>
+                                                    <Text py={2}>Intelligent virtual assistant for cardiologists, with data collection and processing through a K Nearest Neighbors ML model. Website made with Python (Flask), HTML, and CSS. Data stored in a NoSQL database, MongoDB.</Text>
+                                                    <HStack py={2}>
+                                                        <Icon
+                                                            as={BiLogoPython}
+                                                            color="gray.700"
+                                                            boxSize={10}
+                                                        />
+                                                        <Icon
+                                                            as={BiLogoHtml5}
+                                                            color="gray.700"
+                                                            boxSize={10}
+                                                        />
+                                                        <Icon
+                                                            as={BiSolidFileCss}
+                                                            color="gray.700"
+                                                            boxSize={10}
+                                                        />
+                                                        <Icon
+                                                            as={BiLogoMongodb}
+                                                            color="gray.700"
+                                                            boxSize={10}
+                                                        />
+                                                    </HStack>
+                                                </CardBody>
                                             </Stack>
                                         </CardWithHoverEffect>
                                     </div>
@@ -372,4 +421,3 @@ export default function Projects() {
         </>
     );
 }
-  

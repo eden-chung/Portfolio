@@ -5,6 +5,7 @@ import './App.css';
 import NavigationBar from './NavigationBar';
 import Home from './Home';
 import Projects from './Projects';
+import Publications from './Publications';
 import Skills from './Skills';
 import Contact from './Contact';
 import Footer from './Footer';
@@ -15,6 +16,7 @@ function App() {
             <NavigationBar/>
             <Home/>
             <Projects/>
+            <Publications/>
             <Skills/>
             <Contact/>
             <Footer/>
