@@ -87,7 +87,7 @@ export default function Projects() {
                                             <Stack>
                                                 <CardBody align="left">
                                                     <Heading size="md">RNEA GPU Parallelization</Heading>
-                                                    <Text py={2}>Optimized GPU-based parallelization of robotics inverse dynamics algorithms for enhanced performance.</Text>
+                                                    <Text py={2}>Optimized GPU-based parallelization of robotics inverse dynamics algorithms for enhanced performance. Julia and Python.</Text>
                                                     <HStack py={2} justifyContent="space-between">
                                                         <div style={{ display: 'flex', alignItems: 'center' }}>
                                                             <Icon as={BiLogoPython} color="gray.700" boxSize={10} />
