@@ -19,6 +19,7 @@ import { BiLogoJava, BiLogoJavascript, BiLogoMongodb, BiLogoReact, BiLogoHtml5, 
 import { SiTensorflow } from 'react-icons/si';
 
 import RagPaperImage from './images/publications/rag_paper.png';
+import QaPaperImage from './images/publications/qa_paper.png';
 import ClassificationPaperImage from './images/publications/classification_paper.png';
 
 const imageHeight = "250px";
@@ -89,6 +90,35 @@ export default function Publications() {
                                                 <CardBody align="left">
                                                     <Heading size="md">Improving Retrieval for RAG based Question Answering Models on Financial Documents</Heading>
                                                     <Text py={2}>The effectiveness of Large Language Models (LLMs) in generating accurate responses relies heavily on the quality of input provided, particularly when employing Retrieval Augmented Generation (RAG) techniques. RAG enhances LLMs by sourcing the most relevant text chunk(s) to base queries upon. Despite the significant advancements in LLMs' response quality in recent years, users may still encounter inaccuracies or irrelevant answers; these issues often stem from suboptimal text chunk retrieval by RAG rather than the inherent capabilities of LLMs. To augment the efficacy of LLMs, it is crucial to refine the RAG process. This paper explores the existing constraints of RAG pipelines and introduces methodologies for enhancing text retrieval. It delves into strategies such as sophisticated chunking techniques, query expansion, the incorporation of metadata annotations, the application of re-ranking algorithms, and the fine-tuning of embedding algorithms. Implementing these approaches can substantially improve the retrieval quality, thereby elevating the overall performance and reliability of LLMs in processing and responding to queries. </Text>
+                                                </CardBody>
+                                            </Stack>
+                                        </CardWithHoverEffect>
+                                    </div>
+                                </CustomLink>
+                            </Box>
+                            <Box mb={-2}>
+                                <CustomLink href="https://arxiv.org/abs/2402.01722" isExternal>
+                                    <div
+                                        style={{
+                                            transition: "transform 0.3s ease-in-out",
+                                            "&:hover": {
+                                                transform: "scale(1.1)",
+                                            },
+                                        }}
+                                    >
+                                        <CardWithHoverEffect
+                                            width="100%"
+                                            height="20%"
+                                            direction={{
+                                                base: "column",
+                                            }}
+                                            overflow="hidden"
+                                        >
+                                            <Image objectFit="cover" src={QaPaperImage} height={imageHeight} />
+                                            <Stack>
+                                                <CardBody align="left">
+                                                    <Heading size="md">Enhancing Large Language Model Performance To Answer Questions and Extract Information More Accurately</Heading>
+                                                    <Text py={2}>Large Language Models (LLMs) generate responses to questions; however, their effectiveness is often hindered by sub-optimal quality of answers and occasional failures to provide accurate responses to questions. To address these challenges, a fine-tuning process is employed, involving feedback and examples to refine models. The objective is to enhance AI models through continuous feedback loops, utilizing metrics such as cosine similarity, LLM evaluation and Rouge-L scores to evaluate the models. Leveraging LLMs like GPT-3.5, GPT4ALL, and LLaMA2, and Claude, this approach is benchmarked on financial datasets, including the FinanceBench and RAG Instruct Benchmark Tester Dataset, illustrating the necessity of fine-tuning. The results showcase the capability of fine-tuned models to surpass the accuracy of zero-shot LLMs, providing superior question and answering capabilities. Notably, the combination of fine-tuning the LLM with a process known as Retrieval Augmented Generation (RAG) proves to generate responses with improved accuracy. </Text>
                                                 </CardBody>
                                             </Stack>
                                         </CardWithHoverEffect>
