@@ -26,7 +26,8 @@ import spotifyImage from './images/project_covers/spotify.png';
 import columbiaImage from './images/project_covers/columbia.jpg';
 import webserversImage from './images/project_covers/webservers.jpg';
 import C_logo_grey from './images/c_icon_grey.svg';
-import gpu from './images/project_covers/gpu.jpg'
+import gpu from './images/project_covers/gpu.jpg';
+import galacticGestures from './images/project_covers/galactic_gestures.png'
 
 
 const imageHeight = "250px";
@@ -74,6 +75,56 @@ export default function Projects() {
           </Stack>
           <Stack px={4} spacing={5}>
             <VStack>
+            <Box mb={20} position="relative">
+                <CustomLink href="https://github.com/eden-chung/Galactic-Gestures" isExternal>
+                  <div style={{ transition: "transform 0.3s ease-in-out" }}>
+                    <CardWithHoverEffect
+                      width="100%"
+                      height="20%"
+                      direction={{ base: "column" }}
+                      overflow="hidden"
+                    >
+                      <Image objectFit="cover" src={galacticGestures} height={imageHeight} />
+                      <Stack>
+                        <CardBody align="left">
+                          <Heading size="md">Galactic Gestures</Heading>
+                          <Text py={2}> Deep learning gesture classification applied to Space Invaders. Custom deep learning pipelines were created and applied for real-time video feed classification. </Text>
+                          <HStack py={2} justifyContent="space-between">
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                              <Icon as={BiLogoPython} color="gray.700" boxSize={10} />
+                            </div>
+                          </HStack>
+                        </CardBody>
+                      </Stack>
+                    </CardWithHoverEffect>
+                  </div>
+                </CustomLink>
+                <button
+                  style={{
+                    position: 'absolute', // Position the button absolutely within the relative Box
+                    right: '20px', // Position to the right
+                    bottom: '20px', // Position at the bottom
+                    zIndex: 10, // Ensure it is above other elements
+                    border: '1px solid black',
+                    padding: '8px 16px',
+                    cursor: 'pointer',
+                    backgroundColor: 'white',
+                    transition: 'background-color 200ms, color 200ms',
+                    borderRadius: '8px',
+                  }}
+                  onClick={() => window.open("https://github.com/eden-chung/Galactic-Gestures/blob/main/Galactic_Gestures_Final_report.pdf", "_blank", "noopener,noreferrer")}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = 'gray';
+                    e.currentTarget.style.color = 'white';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'white';
+                    e.currentTarget.style.color = 'black';
+                  }}
+                >
+                  See paper
+                </button>
+              </Box>
               <Box mb={20} position="relative">
                 <CustomLink href="https://github.com/eden-chung/RNEA_GPU_Parallelization" isExternal>
                   <div style={{ transition: "transform 0.3s ease-in-out" }}>
