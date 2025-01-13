@@ -13,15 +13,15 @@ const customTheme = extendTheme(theme);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <ChakraProvider theme={customTheme}>
-        <React.StrictMode>
-            <HashRouter basename="/">
-                <Routes>
-                    <Route exact path="/" element={<App/>}/>
-                </Routes>
-            </HashRouter>
-        </React.StrictMode>
-    </ChakraProvider>
+  <ChakraProvider theme={customTheme}>
+    <React.StrictMode>
+      <HashRouter basename="/">
+        <Routes>
+          <Route exact path="/" element={<App />} />
+        </Routes>
+      </HashRouter>
+    </React.StrictMode>
+  </ChakraProvider>
 );
 
 
