@@ -60,7 +60,7 @@ export default function Publications() {
             <Divider orientation="horizontal" />
             <HStack mx={4}>
               <Text color="white" fontWeight={800}>
-                PUBLICATIONS
+                RESEARCH
               </Text>
             </HStack>
             <Divider orientation="horizontal" />

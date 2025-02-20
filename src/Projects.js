@@ -208,7 +208,7 @@ export default function Projects() {
                   </div>
                 </CustomLink>
               </Box>
-              <Box mb={20}>
+              {/* <Box mb={20}>
                 <CustomLink href="https://github.com/eden-chung/AnoteML" isExternal>
                   <div
                     style={{
@@ -243,7 +243,7 @@ export default function Projects() {
                     </CardWithHoverEffect>
                   </div>
                 </CustomLink>
-              </Box>
+              </Box> */}
               <Box mb={20}>
                 <CustomLink href="https://github.com/eden-chung/BreakThroughTechAI" isExternal>
                   <div
@@ -417,7 +417,7 @@ export default function Projects() {
                   </div>
                 </CustomLink>
               </Box>
-              <Box mb={-12}>
+              {/* <Box mb={-12}>
                 <CustomLink href="https://github.com/eden-chung/CardiologistAssistantML" isExternal>
                   <div
                     style={{
@@ -467,7 +467,7 @@ export default function Projects() {
                     </CardWithHoverEffect>
                   </div>
                 </CustomLink>
-              </Box>
+              </Box> */}
             </VStack>
           </Stack>
         </Stack>

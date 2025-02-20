@@ -101,7 +101,7 @@ export default function Nav() {
                         Projects
                       </Button>
                       <Button variant="ghost" onClick={scrollToPublications} style={{ color: buttonTextColor }} _hover={{ backgroundColor: buttonHoverColor }}>
-                        Publications
+                        Research
                       </Button>
                       <Button variant="ghost" onClick={scrollToSkills} style={{ color: buttonTextColor }} _hover={{ backgroundColor: buttonHoverColor }}>
                         Skills
@@ -125,7 +125,7 @@ export default function Nav() {
                   Projects
                 </Button>
                 <Button variant="ghost" onClick={scrollToPublications} style={{ color: buttonTextColor }} _hover={{ backgroundColor: buttonHoverColor }}>
-                  Publications
+                  Research
                 </Button>
                 <Button variant="ghost" onClick={scrollToSkills} style={{ color: buttonTextColor }} _hover={{ backgroundColor: buttonHoverColor }}>
                   Skills
